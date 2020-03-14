@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="clean.platform.disorder.mapper.TbServiceItemConfigMapper">
+
+	<resultMap id="BaseResultMap" type="clean.platform.disorder.model.entity.TbServiceItemConfig">
+		<id column="id" property="id" jdbcType="INTEGER" />
+		<result column="book_count" property="bookCount" jdbcType="SMALLINT" />
+		<result column="unit_price" property="unitPrice" jdbcType="DECIMAL" />
+		<result column="unit" property="unit" jdbcType="VARCHAR" />
+		<result column="sale_price" property="salePrice" jdbcType="DECIMAL" />
+		<result column="total_time" property="totalTime" jdbcType="REAL" />
+		<result column="p_count" property="pCount" jdbcType="SMALLINT" />
+		<result column="time_range_start" property="timeRangeStart" jdbcType="SMALLINT" />
+		<result column="time_range_end" property="timeRangeEnd" jdbcType="SMALLINT" />
+		<result column="price_range_start" property="priceRangeStart" jdbcType="DECIMAL" />
+		<result column="price_range_end" property="priceRangeEnd" jdbcType="DECIMAL" />
+		<result column="reserved_field_1" property="reservedField1" jdbcType="VARCHAR" />
+		<result column="reserved_field_2" property="reservedField2" jdbcType="VARCHAR" />
+		<result column="reserved_field_3" property="reservedField3" jdbcType="VARCHAR" />
+	</resultMap>
+
+	<sql id="Base_Column_List">
+		id, book_count, unit_price, unit, sale_price, total_time, p_count, time_range_start, time_range_end, price_range_start, price_range_end, reserved_field_1, reserved_field_2, reserved_field_3
+	</sql>
+
+	<!-- 根据pk查询 -->
+	<select id="selectByPrimaryKey" resultMap="BaseResultMap"
+		parameterType="java.lang.Long">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM tb_service_item_config
+		WHERE id = #{id, jdbcType=BIGINT}
+	</select>
+
+	<!-- 根据pk删除 -->
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+		DELETE FROM tb_service_item_config
+		WHERE id = #{id, jdbcType=BIGINT}
+	</delete>
+
+	<!-- 新增 -->
+	<insert id="insert" parameterType="clean.platform.disorder.model.entity.TbServiceItemConfig">
+		<selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+		INSERT INTO tb_service_item_config
+		(book_count, unit_price, unit, sale_price, total_time, p_count, time_range_start, time_range_end, price_range_start, price_range_end, reserved_field_1, reserved_field_2, reserved_field_3)
+		VALUES (#{bookCount, jdbcType=SMALLINT}, #{unitPrice, jdbcType=DECIMAL}, 
+		#{unit, jdbcType=VARCHAR}, #{salePrice, jdbcType=DECIMAL}, 
+		#{totalTime, jdbcType=REAL}, #{pCount, jdbcType=SMALLINT}, 
+		#{timeRangeStart, jdbcType=SMALLINT}, #{timeRangeEnd, jdbcType=SMALLINT}, 
+		#{priceRangeStart, jdbcType=DECIMAL}, #{priceRangeEnd, jdbcType=DECIMAL}, 
+		#{reservedField1, jdbcType=VARCHAR}, #{reservedField2, jdbcType=VARCHAR}, 
+		#{reservedField3, jdbcType=VARCHAR})
+	</insert>
+
+	<!-- 新增 -->
+	<insert id="insertSelective" parameterType="clean.platform.disorder.model.entity.TbServiceItemConfig">
+		<selectKey resultType="java.lang.Integer" keyProperty="id" order="AFTER">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+		INSERT INTO tb_service_item_config
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="bookCount != null">
+				book_count,
+			</if>
+			<if test="unitPrice != null">
+				unit_price,
+			</if>
+			<if test="unit != null">
+				unit,
+			</if>
+			<if test="salePrice != null">
+				sale_price,
+			</if>
+			<if test="totalTime != null">
+				total_time,
+			</if>
+			<if test="pCount != null">
+				p_count,
+			</if>
+			<if test="timeRangeStart != null">
+				time_range_start,
+			</if>
+			<if test="timeRangeEnd != null">
+				time_range_end,
+			</if>
+			<if test="priceRangeStart != null">
+				price_range_start,
+			</if>
+			<if test="priceRangeEnd != null">
+				price_range_end,
+			</if>
+			<if test="reservedField1 != null">
+				reserved_field_1,
+			</if>
+			<if test="reservedField2 != null">
+				reserved_field_2,
+			</if>
+			<if test="reservedField3 != null">
+				reserved_field_3,
+			</if>
+		</trim>
+		<trim prefix="VALUES (" suffix=")" suffixOverrides=",">
+			<if test="bookCount != null">
+				#{bookCount,jdbcType=SMALLINT},
+			</if>
+			<if test="unitPrice != null">
+				#{unitPrice,jdbcType=DECIMAL},
+			</if>
+			<if test="unit != null">
+				#{unit,jdbcType=VARCHAR},
+			</if>
+			<if test="salePrice != null">
+				#{salePrice,jdbcType=DECIMAL},
+			</if>
+			<if test="totalTime != null">
+				#{totalTime,jdbcType=REAL},
+			</if>
+			<if test="pCount != null">
+				#{pCount,jdbcType=SMALLINT},
+			</if>
+			<if test="timeRangeStart != null">
+				#{timeRangeStart,jdbcType=SMALLINT},
+			</if>
+			<if test="timeRangeEnd != null">
+				#{timeRangeEnd,jdbcType=SMALLINT},
+			</if>
+			<if test="priceRangeStart != null">
+				#{priceRangeStart,jdbcType=DECIMAL},
+			</if>
+			<if test="priceRangeEnd != null">
+				#{priceRangeEnd,jdbcType=DECIMAL},
+			</if>
+			<if test="reservedField1 != null">
+				#{reservedField1,jdbcType=VARCHAR},
+			</if>
+			<if test="reservedField2 != null">
+				#{reservedField2,jdbcType=VARCHAR},
+			</if>
+			<if test="reservedField3 != null">
+				#{reservedField3,jdbcType=VARCHAR},
+			</if>
+		</trim>
+	</insert>
+
+	<!-- 批量新增 -->
+	<insert id="insertBatch" parameterType="java.util.List" useGeneratedKeys="true" keyProperty="id">
+		INSERT INTO tb_service_item_config
+		(book_count, unit_price, unit, sale_price, total_time, p_count, time_range_start, time_range_end, price_range_start, price_range_end, reserved_field_1, reserved_field_2, reserved_field_3)
+		VALUES
+		<foreach collection="list" item="item" index="index" separator=",">  
+		(#{item.bookCount, jdbcType=SMALLINT}, #{item.unitPrice, jdbcType=DECIMAL}, 
+		#{item.unit, jdbcType=VARCHAR}, #{item.salePrice, jdbcType=DECIMAL}, 
+		#{item.totalTime, jdbcType=REAL}, #{item.pCount, jdbcType=SMALLINT}, 
+		#{item.timeRangeStart, jdbcType=SMALLINT}, #{item.timeRangeEnd, jdbcType=SMALLINT}, 
+		#{item.priceRangeStart, jdbcType=DECIMAL}, #{item.priceRangeEnd, jdbcType=DECIMAL}, 
+		#{item.reservedField1, jdbcType=VARCHAR}, #{item.reservedField2, jdbcType=VARCHAR}, 
+		#{item.reservedField3, jdbcType=VARCHAR})
+		</foreach>
+	</insert>
+
+	<!-- 根据pk更新 -->
+	<update id="updateByPrimaryKeySelective" parameterType="clean.platform.disorder.model.entity.TbServiceItemConfig">
+		UPDATE tb_service_item_config
+		<set>
+			<if test="bookCount != null">
+				book_count = #{bookCount, jdbcType=SMALLINT},
+			</if>
+			<if test="unitPrice != null">
+				unit_price = #{unitPrice, jdbcType=DECIMAL},
+			</if>
+			<if test="unit != null">
+				unit = #{unit, jdbcType=VARCHAR},
+			</if>
+			<if test="salePrice != null">
+				sale_price = #{salePrice, jdbcType=DECIMAL},
+			</if>
+			<if test="totalTime != null">
+				total_time = #{totalTime, jdbcType=REAL},
+			</if>
+			<if test="pCount != null">
+				p_count = #{pCount, jdbcType=SMALLINT},
+			</if>
+			<if test="timeRangeStart != null">
+				time_range_start = #{timeRangeStart, jdbcType=SMALLINT},
+			</if>
+			<if test="timeRangeEnd != null">
+				time_range_end = #{timeRangeEnd, jdbcType=SMALLINT},
+			</if>
+			<if test="priceRangeStart != null">
+				price_range_start = #{priceRangeStart, jdbcType=DECIMAL},
+			</if>
+			<if test="priceRangeEnd != null">
+				price_range_end = #{priceRangeEnd, jdbcType=DECIMAL},
+			</if>
+			<if test="reservedField1 != null">
+				reserved_field_1 = #{reservedField1, jdbcType=VARCHAR},
+			</if>
+			<if test="reservedField2 != null">
+				reserved_field_2 = #{reservedField2, jdbcType=VARCHAR},
+			</if>
+			<if test="reservedField3 != null">
+				reserved_field_3 = #{reservedField3, jdbcType=VARCHAR},
+			</if>
+		</set>
+		WHERE id = #{id, jdbcType=BIGINT}
+	</update>
+
+	<!-- 根据pk更新 -->
+	<update id="updateByPrimaryKey" parameterType="clean.platform.disorder.model.entity.TbServiceItemConfig">
+		UPDATE tb_service_item_config
+		set 
+		book_count = #{bookCount, jdbcType=SMALLINT},
+		unit_price = #{unitPrice, jdbcType=DECIMAL},
+		unit = #{unit, jdbcType=VARCHAR},
+		sale_price = #{salePrice, jdbcType=DECIMAL},
+		total_time = #{totalTime, jdbcType=REAL},
+		p_count = #{pCount, jdbcType=SMALLINT},
+		time_range_start = #{timeRangeStart, jdbcType=SMALLINT},
+		time_range_end = #{timeRangeEnd, jdbcType=SMALLINT},
+		price_range_start = #{priceRangeStart, jdbcType=DECIMAL},
+		price_range_end = #{priceRangeEnd, jdbcType=DECIMAL},
+		reserved_field_1 = #{reservedField1, jdbcType=VARCHAR},
+		reserved_field_2 = #{reservedField2, jdbcType=VARCHAR},
+		reserved_field_3 = #{reservedField3, jdbcType=VARCHAR}
+		WHERE id = #{id, jdbcType=BIGINT}
+	</update>
+
+</mapper>

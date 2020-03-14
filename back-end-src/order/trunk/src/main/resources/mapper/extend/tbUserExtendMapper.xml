@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="clean.platform.disorder.mapper.extend.TbUserExtendMapper">
+
+	<sql id="Base_Column_List">
+		id, user_name, user_account, password, is_active
+	</sql>
+
+	<!-- 根据id查询 -->
+	<select id="selectByPK" resultType="clean.platform.disorder.model.entity.vo.TbUserVo">
+		SELECT
+		a.id,
+		a.user_name,
+		a.user_account,
+		a.password,
+		a.is_active,
+		b.role_id,
+		c.role_name
+		FROM tb_user a left join tb_user_role b on a.id = b.user_id
+		left join tb_role c on b.role_id = c.id
+		WHERE a.is_active =1 and a.id = #{id, jdbcType=BIGINT}
+	</select>
+
+	<!-- 根据vo查询 -->
+	<select id="selectByVo" resultType="clean.platform.disorder.model.entity.vo.TbUserVo"
+		parameterType="clean.platform.disorder.model.entity.vo.TbUserVo">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM tb_user
+		<where>
+			is_active = 1
+			<if test="id != null">
+				AND id = #{id, jdbcType=BIGINT}
+			</if>
+			<if test="userName != null">
+				AND user_name like #{userName, jdbcType=VARCHAR}"%"
+			</if>
+			<if test="userAccount != null">
+				AND user_account like #{userAccount, jdbcType=VARCHAR}"%"
+			</if>
+			<if test="password != null">
+				AND password = #{password, jdbcType=VARCHAR}
+			</if>
+		</where>
+	</select>
+
+	<select id="selectLoginUser" parameterType="clean.platform.disorder.model.entity.vo.TbUserVo"
+	 resultType="clean.platform.disorder.model.dto.LoginUser">
+		select a.id as userId,
+		a.user_name,
+		a.user_account,
+		c.id as roleId,
+		c.role_name
+		from tb_user a left join tb_user_role b on a.id = b.user_id
+		left join tb_role c on b.role_id = c.id
+		<where>
+			a.is_active = 1   and a.user_account = #{userAccount, jdbcType=VARCHAR}
+			and a.password = #{password, jdbcType=VARCHAR}
+		</where>
+	</select>
+
+</mapper>

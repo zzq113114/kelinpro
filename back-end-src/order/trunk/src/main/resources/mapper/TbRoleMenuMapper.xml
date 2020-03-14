@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="clean.platform.disorder.mapper.TbRoleMenuMapper">
+
+	<resultMap id="BaseResultMap" type="clean.platform.disorder.model.entity.TbRoleMenu">
+		<id column="role_id" property="roleId" jdbcType="INTEGER" />
+		<result column="menu_id" property="menuId" jdbcType="INTEGER" />
+	</resultMap>
+
+	<sql id="Base_Column_List">
+		role_id, menu_id
+	</sql>
+
+	<!-- 根据pk查询 -->
+	<select id="selectByPrimaryKey" resultMap="BaseResultMap"
+		parameterType="java.lang.Long">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM tb_role_menu
+		WHERE id = #{id, jdbcType=BIGINT}
+	</select>
+
+	<!-- 根据pk删除 -->
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+		DELETE FROM tb_role_menu
+		WHERE id = #{id, jdbcType=BIGINT}
+	</delete>
+
+	<!-- 新增 -->
+	<insert id="insert" parameterType="clean.platform.disorder.model.entity.TbRoleMenu">
+		INSERT INTO tb_role_menu
+		(role_id,menu_id)
+		VALUES (#{roleId, jdbcType=INTEGER},#{menuId, jdbcType=INTEGER})
+	</insert>
+
+	<!-- 新增 -->
+	<insert id="insertSelective" parameterType="clean.platform.disorder.model.entity.TbRoleMenu">
+		INSERT INTO tb_role_menu
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="roleId != null">
+				role_id,
+			</if>
+			<if test="menuId != null">
+				menu_id,
+			</if>
+		</trim>
+		<trim prefix="VALUES (" suffix=")" suffixOverrides=",">
+			<if test="roleId != null">
+				#{roleId,jdbcType = INTEGER},
+			</if>
+			<if test="menuId != null">
+				#{menuId,jdbcType=INTEGER},
+			</if>
+		</trim>
+	</insert>
+
+	<!-- 批量新增 -->
+	<insert id="insertBatch" parameterType="java.util.List">
+		INSERT INTO tb_role_menu
+		(role_id, menu_id)
+		VALUES
+		<foreach collection="list" item="item" index="index" separator=",">
+		(#{item.roleId, jdbcType=INTEGER}, #{item.menuId, jdbcType=INTEGER})
+		</foreach>
+	</insert>
+
+	<!-- 根据pk更新 -->
+	<update id="updateByPrimaryKeySelective" parameterType="clean.platform.disorder.model.entity.TbRoleMenu">
+		UPDATE tb_role_menu
+		<set>
+			<if test="menuId != null">
+				menu_id = #{menuId, jdbcType=INTEGER},
+			</if>
+		</set>
+		WHERE id = #{id, jdbcType=BIGINT}
+	</update>
+
+	<!-- 根据pk更新 -->
+	<update id="updateByPrimaryKey" parameterType="clean.platform.disorder.model.entity.TbRoleMenu">
+		UPDATE tb_role_menu
+		set 
+		menu_id = #{menuId, jdbcType=INTEGER}
+		WHERE id = #{id, jdbcType=BIGINT}
+	</update>
+
+</mapper>

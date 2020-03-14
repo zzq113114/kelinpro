@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="clean.platform.disorder.mapper.TbDisOrderMapper">
+
+	<resultMap id="BaseResultMap" type="clean.platform.disorder.model.entity.TbDisOrder">
+		<id column="id" property="id" jdbcType="BIGINT" />
+		<result column="order_id" property="orderId" jdbcType="BIGINT" />
+		<result column="company_id" property="companyId" jdbcType="BIGINT" />
+		<result column="is_accept" property="isAccept" jdbcType="SMALLINT" />
+		<result column="remark" property="remark" jdbcType="VARCHAR" />
+		<result column="create_date" property="createDate" jdbcType="TIMESTAMP" />
+		<result column="create_user" property="createUser" jdbcType="VARBINARY" />
+	</resultMap>
+
+	<sql id="Base_Column_List">
+		id, order_id, company_id, is_accept, remark, create_date, create_user
+	</sql>
+
+	<!-- 根据pk查询 -->
+	<select id="selectByPrimaryKey" resultMap="BaseResultMap"
+		parameterType="java.lang.Long">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM tb_dis_order
+		WHERE id = #{id, jdbcType=BIGINT}
+	</select>
+
+	<!-- 根据pk删除 -->
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+		DELETE FROM tb_dis_order
+		WHERE id = #{id, jdbcType=BIGINT}
+	</delete>
+
+	<!-- 新增 -->
+	<insert id="insert" parameterType="clean.platform.disorder.model.entity.TbDisOrder">
+		<selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+		INSERT INTO tb_dis_order
+		(order_id, company_id, is_accept, remark, create_date, create_user)
+		VALUES (#{orderId, jdbcType=BIGINT}, #{companyId, jdbcType=BIGINT}, 
+		#{isAccept, jdbcType=SMALLINT}, #{remark, jdbcType=VARCHAR}, 
+		#{createDate, jdbcType=TIMESTAMP}, #{createUser, jdbcType=VARBINARY}
+		)
+	</insert>
+
+	<!-- 新增 -->
+	<insert id="insertSelective" parameterType="clean.platform.disorder.model.entity.TbDisOrder">
+		<selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+		INSERT INTO tb_dis_order
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="orderId != null">
+				order_id,
+			</if>
+			<if test="companyId != null">
+				company_id,
+			</if>
+			<if test="isAccept != null">
+				is_accept,
+			</if>
+			<if test="remark != null">
+				remark,
+			</if>
+			<if test="createDate != null">
+				create_date,
+			</if>
+			<if test="createUser != null">
+				create_user,
+			</if>
+		</trim>
+		<trim prefix="VALUES (" suffix=")" suffixOverrides=",">
+			<if test="orderId != null">
+				#{orderId,jdbcType=BIGINT},
+			</if>
+			<if test="companyId != null">
+				#{companyId,jdbcType=BIGINT},
+			</if>
+			<if test="isAccept != null">
+				#{isAccept,jdbcType=SMALLINT},
+			</if>
+			<if test="remark != null">
+				#{remark,jdbcType=VARCHAR},
+			</if>
+			<if test="createDate != null">
+				#{createDate,jdbcType=TIMESTAMP},
+			</if>
+			<if test="createUser != null">
+				#{createUser,jdbcType=VARBINARY},
+			</if>
+		</trim>
+	</insert>
+
+	<!-- 批量新增 -->
+	<insert id="insertBatch" parameterType="java.util.List" useGeneratedKeys="true" keyProperty="id">
+		INSERT INTO tb_dis_order
+		(order_id, company_id, is_accept, remark, create_date, create_user)
+		VALUES
+		<foreach collection="list" item="item" index="index" separator=",">  
+		(#{item.orderId, jdbcType=BIGINT}, #{item.companyId, jdbcType=BIGINT}, 
+		#{item.isAccept, jdbcType=SMALLINT}, #{item.remark, jdbcType=VARCHAR}, 
+		#{item.createDate, jdbcType=TIMESTAMP}, #{item.createUser, jdbcType=VARBINARY}
+		)
+		</foreach>
+	</insert>
+
+	<!-- 根据pk更新 -->
+	<update id="updateByPrimaryKeySelective" parameterType="clean.platform.disorder.model.entity.TbDisOrder">
+		UPDATE tb_dis_order
+		<set>
+			<if test="orderId != null">
+				order_id = #{orderId, jdbcType=BIGINT},
+			</if>
+			<if test="companyId != null">
+				company_id = #{companyId, jdbcType=BIGINT},
+			</if>
+			<if test="isAccept != null">
+				is_accept = #{isAccept, jdbcType=SMALLINT},
+			</if>
+			<if test="remark != null">
+				remark = #{remark, jdbcType=VARCHAR},
+			</if>
+			<if test="createDate != null">
+				create_date = #{createDate, jdbcType=TIMESTAMP},
+			</if>
+			<if test="createUser != null">
+				create_user = #{createUser, jdbcType=VARBINARY},
+			</if>
+		</set>
+		WHERE id = #{id, jdbcType=BIGINT}
+	</update>
+
+	<!-- 根据pk更新 -->
+	<update id="updateByPrimaryKey" parameterType="clean.platform.disorder.model.entity.TbDisOrder">
+		UPDATE tb_dis_order
+		set 
+		order_id = #{orderId, jdbcType=BIGINT},
+		company_id = #{companyId, jdbcType=BIGINT},
+		is_accept = #{isAccept, jdbcType=SMALLINT},
+		remark = #{remark, jdbcType=VARCHAR},
+		create_date = #{createDate, jdbcType=TIMESTAMP},
+		create_user = #{createUser, jdbcType=VARBINARY}
+		WHERE id = #{id, jdbcType=BIGINT}
+	</update>
+
+</mapper>

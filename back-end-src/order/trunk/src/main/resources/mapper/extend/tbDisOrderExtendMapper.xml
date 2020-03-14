@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="clean.platform.disorder.mapper.extend.TbDisOrderExtendMapper">
+
+	<sql id="Base_Column_List">
+		id, order_id, company_id, is_accept, remark, create_date, create_user
+	</sql>
+
+	<!-- 根据id查询 -->
+	<select id="selectByPK" resultType="clean.platform.disorder.model.entity.vo.TbDisOrderVo">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM tb_dis_order
+		WHERE id = #{id, jdbcType=BIGINT}
+	</select>
+
+	<!-- 根据vo查询 -->
+	<select id="selectByVo" resultType="clean.platform.disorder.model.entity.vo.TbDisOrderVo"
+		parameterType="clean.platform.disorder.model.entity.vo.TbDisOrderVo">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM tb_dis_order
+		<where>
+			<if test="id != null">
+				AND id = #{id, jdbcType=BIGINT}
+			</if>
+			<if test="orderId != null">
+				AND order_id = #{orderId, jdbcType=BIGINT}
+			</if>
+			<if test="companyId != null">
+				AND company_id = #{companyId, jdbcType=BIGINT}
+			</if>
+			<if test="isAccept != null">
+				AND is_accept = #{isAccept, jdbcType=SMALLINT}
+			</if>
+			<if test="remark != null">
+				AND remark = #{remark, jdbcType=VARCHAR}
+			</if>
+			<if test="createDate != null">
+				AND create_date = #{createDate, jdbcType=TIMESTAMP}
+			</if>
+			<if test="createUser != null">
+				AND create_user = #{createUser, jdbcType=VARBINARY}
+			</if>
+		</where>
+	</select>
+
+</mapper>

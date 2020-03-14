@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="clean.platform.disorder.mapper.extend.TbRoleMenuExtendMapper">
+
+	<sql id="Base_Column_List">
+		role_id, menu_id
+	</sql>
+
+	<!-- 根据id查询 -->
+	<select id="selectByPK" resultType="clean.platform.disorder.model.entity.vo.TbRoleMenuVo">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM tb_role_menu
+		WHERE id = #{id, jdbcType=BIGINT}
+	</select>
+
+	<!-- 根据vo查询 -->
+	<select id="selectByVo" resultType="clean.platform.disorder.model.entity.vo.TbRoleMenuVo"
+		parameterType="clean.platform.disorder.model.entity.vo.TbRoleMenuVo">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM tb_role_menu
+		<where>
+			<if test="roleId != null">
+				AND role_id = #{roleId, jdbcType=INTEGER}
+			</if>
+			<if test="menuId != null">
+				AND menu_id = #{menuId, jdbcType=INTEGER}
+			</if>
+		</where>
+	</select>
+
+</mapper>

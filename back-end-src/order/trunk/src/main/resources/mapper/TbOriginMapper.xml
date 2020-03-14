@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="clean.platform.disorder.mapper.TbOriginMapper">
+
+	<resultMap id="BaseResultMap" type="clean.platform.disorder.model.entity.TbOrigin">
+		<id column="id" property="id" jdbcType="INTEGER" />
+		<result column="origin_from" property="originFrom" jdbcType="VARCHAR" />
+	</resultMap>
+
+	<sql id="Base_Column_List">
+		id, origin_from
+	</sql>
+
+	<!-- 根据pk查询 -->
+	<select id="selectByPrimaryKey" resultMap="BaseResultMap"
+		parameterType="java.lang.Long">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM tb_origin
+		WHERE id = #{id, jdbcType=BIGINT}
+	</select>
+
+	<!-- 根据pk删除 -->
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+		DELETE FROM tb_origin
+		WHERE id = #{id, jdbcType=BIGINT}
+	</delete>
+
+	<!-- 新增 -->
+	<insert id="insert" parameterType="clean.platform.disorder.model.entity.TbOrigin">
+		<selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+		INSERT INTO tb_origin
+		(origin_from)
+		VALUES (#{originFrom, jdbcType=VARCHAR})
+	</insert>
+
+	<!-- 新增 -->
+	<insert id="insertSelective" parameterType="clean.platform.disorder.model.entity.TbOrigin">
+		<selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+		INSERT INTO tb_origin
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="originFrom != null">
+				origin_from,
+			</if>
+		</trim>
+		<trim prefix="VALUES (" suffix=")" suffixOverrides=",">
+			<if test="originFrom != null">
+				#{originFrom,jdbcType=VARCHAR},
+			</if>
+		</trim>
+	</insert>
+
+	<!-- 批量新增 -->
+	<insert id="insertBatch" parameterType="java.util.List" useGeneratedKeys="true" keyProperty="id">
+		INSERT INTO tb_origin
+		(origin_from)
+		VALUES
+		<foreach collection="list" item="item" index="index" separator=",">  
+		(#{item.originFrom, jdbcType=VARCHAR})
+		</foreach>
+	</insert>
+
+	<!-- 根据pk更新 -->
+	<update id="updateByPrimaryKeySelective" parameterType="clean.platform.disorder.model.entity.TbOrigin">
+		UPDATE tb_origin
+		<set>
+			<if test="originFrom != null">
+				origin_from = #{originFrom, jdbcType=VARCHAR},
+			</if>
+		</set>
+		WHERE id = #{id, jdbcType=BIGINT}
+	</update>
+
+	<!-- 根据pk更新 -->
+	<update id="updateByPrimaryKey" parameterType="clean.platform.disorder.model.entity.TbOrigin">
+		UPDATE tb_origin
+		set 
+		origin_from = #{originFrom, jdbcType=VARCHAR}
+		WHERE id = #{id, jdbcType=BIGINT}
+	</update>
+
+</mapper>

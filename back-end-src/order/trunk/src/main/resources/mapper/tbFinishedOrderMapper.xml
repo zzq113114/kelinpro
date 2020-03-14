@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="clean.platform.disorder.mapper.TbFinishedOrderMapper">
+
+	<resultMap id="BaseResultMap" type="clean.platform.disorder.model.entity.TbFinishedOrder">
+		<id column="id" property="id" jdbcType="BIGINT" />
+		<result column="order_id" property="orderId" jdbcType="BIGINT" />
+		<result column="status" property="status" jdbcType="SMALLINT" />
+		<result column="income_amount" property="incomeAmount" jdbcType="DECIMAL"/>
+		<result column="reason" property="reason" jdbcType="VARCHAR" />
+		<result column="evaluations" property="evaluations" jdbcType="VARCHAR" />
+		<result column="eval_level" property="evalLevel" jdbcType="SMALLINT" />
+		<result column="create_date" property="createDate" jdbcType="TIMESTAMP" />
+		<result column="create_user" property="createUser" jdbcType="VARCHAR" />
+	</resultMap>
+
+	<sql id="Base_Column_List">
+		id, order_id, status, income_amount, reason, evaluations, eval_level, create_date, create_user
+	</sql>
+
+	<!-- 根据pk查询 -->
+	<select id="selectByPrimaryKey" resultMap="BaseResultMap"
+		parameterType="java.lang.Long">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM tb_finished_order
+		WHERE id = #{id, jdbcType=BIGINT}
+	</select>
+
+
+	<!-- 根据pk删除 -->
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+		DELETE FROM tb_finished_order
+		WHERE id = #{id, jdbcType=BIGINT}
+	</delete>
+
+	<!-- 新增 -->
+	<insert id="insert" parameterType="clean.platform.disorder.model.entity.TbFinishedOrder">
+		INSERT INTO tb_finished_order
+		(id,order_id, status,income_amount, reason, evaluations, eval_level, create_date, create_user)
+		VALUES (#{id, jdbcType=BIGINT},#{orderId, jdbcType=BIGINT}, #{status, jdbcType=SMALLINT}, #{incomeAmount, jdbcType=DECIMAL},
+		#{reason, jdbcType=VARCHAR}, #{evaluations, jdbcType=VARCHAR},
+		#{evalLevel, jdbcType=SMALLINT}, #{createDate, jdbcType=TIMESTAMP},
+		#{createUser, jdbcType=VARCHAR})
+	</insert>
+
+	<!-- 新增 -->
+	<insert id="insertSelective" parameterType="clean.platform.disorder.model.entity.TbFinishedOrder">
+		INSERT INTO tb_finished_order
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				id,
+			</if>
+			<if test="orderId != null">
+				order_id,
+			</if>
+			<if test="status != null">
+				status,
+			</if>
+			<if test="incomeAmount != null">
+				income_amount,
+			</if>
+			<if test="reason != null">
+				reason,
+			</if>
+			<if test="evaluations != null">
+				evaluations,
+			</if>
+			<if test="evalLevel != null">
+				eval_level,
+			</if>
+			<if test="createDate != null">
+				create_date,
+			</if>
+			<if test="createUser != null">
+				create_user,
+			</if>
+		</trim>
+		<trim prefix="VALUES (" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				#{id, jdbcType = BIGINT},
+			</if>
+			<if test="orderId != null">
+				#{orderId,jdbcType=BIGINT},
+			</if>
+			<if test="status != null">
+				#{status,jdbcType=SMALLINT},
+			</if>
+			<if test="incomeAmount != null">
+				#{incomeAmount, jdbcType=DECIMAL},
+			</if>
+			<if test="reason != null">
+				#{reason,jdbcType=VARCHAR},
+			</if>
+			<if test="evaluations != null">
+				#{evaluations,jdbcType=VARCHAR},
+			</if>
+			<if test="evalLevel != null">
+				#{evalLevel,jdbcType=SMALLINT},
+			</if>
+			<if test="createDate != null">
+				#{createDate,jdbcType=TIMESTAMP},
+			</if>
+			<if test="createUser != null">
+				#{createUser,jdbcType=VARCHAR},
+			</if>
+		</trim>
+	</insert>
+
+	<!-- 批量新增 -->
+	<insert id="insertBatch" parameterType="java.util.List" useGeneratedKeys="true" keyProperty="id">
+		INSERT INTO tb_finished_order
+		(id,order_id, status,income_amount, reason, evaluations, eval_level, create_date, create_user)
+		VALUES
+		<foreach collection="list" item="item" index="index" separator=",">
+		(#{item.id, jdbcType=BIGINT},#{item.orderId, jdbcType=BIGINT}, #{item.status, jdbcType=SMALLINT},
+		#{item.incomeAmount, jdbcType=DECIMAL},
+		#{item.reason, jdbcType=VARCHAR}, #{item.evaluations, jdbcType=VARCHAR},
+		#{item.evalLevel, jdbcType=SMALLINT}, #{item.createDate, jdbcType=TIMESTAMP},
+		#{item.createUser, jdbcType=VARCHAR})
+		</foreach>
+	</insert>
+
+	<!-- 根据pk更新 -->
+	<update id="updateByPrimaryKeySelective" parameterType="clean.platform.disorder.model.entity.TbFinishedOrder">
+		UPDATE tb_finished_order
+		<set>
+			<if test="orderId != null">
+				order_id = #{orderId, jdbcType=BIGINT},
+			</if>
+			<if test="status != null">
+				status = #{status, jdbcType=SMALLINT},
+			</if>
+			<if test="incomeAmount != null">
+				income_amount = #{incomeAmount, jdbcType=DECIMAL},
+			</if>
+			<if test="reason != null">
+				reason = #{reason, jdbcType=VARCHAR},
+			</if>
+			<if test="evaluations != null">
+				evaluations = #{evaluations, jdbcType=VARCHAR},
+			</if>
+			<if test="evalLevel != null">
+				eval_level = #{evalLevel, jdbcType=SMALLINT},
+			</if>
+			<if test="createDate != null">
+				create_date = #{createDate, jdbcType=TIMESTAMP},
+			</if>
+			<if test="createUser != null">
+				create_user = #{createUser, jdbcType=VARCHAR},
+			</if>
+		</set>
+		WHERE id = #{id, jdbcType=BIGINT}
+	</update>
+
+	<!-- 根据pk更新 -->
+	<update id="updateByPrimaryKey" parameterType="clean.platform.disorder.model.entity.TbFinishedOrder">
+		UPDATE tb_finished_order
+		set
+		order_id = #{orderId, jdbcType=BIGINT},
+		status = #{status, jdbcType=SMALLINT},
+		income_amount = #{incomeAmount, jdbcType=DECIMAL},
+		reason = #{reason, jdbcType=VARCHAR},
+		evaluations = #{evaluations, jdbcType=VARCHAR},
+		eval_level = #{evalLevel, jdbcType=SMALLINT},
+		create_date = #{createDate, jdbcType=TIMESTAMP},
+		create_user = #{createUser, jdbcType=VARCHAR}
+		WHERE id = #{id, jdbcType=BIGINT}
+	</update>
+	<!--<select id="finishOrder" parameterType="clean.platform.disorder.model.entity.TbFinishedOrder">-->
+    <!--select  * from tb_finished_order f-->
+    <!--<where>-->
+    <!--status in(0,1)-->
+    <!--<if test="orderId !=null" >-->
+    <!--order_id=#{orderId , jdbcType=BIGINT}-->
+	<!--</if>-->
+	<!--</where>>-->
+
+	<!--</select>-->
+
+
+</mapper>

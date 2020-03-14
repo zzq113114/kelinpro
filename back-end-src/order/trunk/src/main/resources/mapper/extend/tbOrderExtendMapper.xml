@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="clean.platform.disorder.mapper.extend.TbOrderExtendMapper">
+
+    <sql id="Base_Column_List">
+		id, order_no,origin_order_id, status, detail_info, origin, from_web, customer_name,staff_count,work_hours, customer_address, amount,mobile_no,payment, book_start_date, book_end_date, create_date, create_user, remark
+	</sql>
+
+    <!-- 根据id查询 -->
+    <select id="selectByPK" resultType="clean.platform.disorder.model.entity.vo.TbOrderVo">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM tb_order
+        WHERE id = #{id, jdbcType=BIGINT}
+    </select>
+
+    <!-- 根据vo查询 -->
+    <select id="selectByVo" resultType="clean.platform.disorder.model.entity.vo.TbOrderVo"
+            parameterType="clean.platform.disorder.model.entity.vo.TbOrderVo">
+        SELECT
+        a.id,
+        a.customer_name,
+        a.mobile_no,
+        a.customer_address,
+        a.detail_info,
+        a.status,
+        a.payment,
+        b.origin_from
+        FROM tb_order a left join tb_origin b on a.origin = b.id
+        <where>
+            <if test="id != null">
+                AND a.id = #{id, jdbcType=BIGINT}
+            </if>
+            <if test="orderNo != null">
+                AND a.order_no = #{orderNo, jdbcType=VARBINARY}
+            </if>
+            <if test="status != null">
+                AND a.status = #{status, jdbcType=SMALLINT}
+            </if>
+            <if test="detailInfo != null">
+                AND a.detail_info = #{detailInfo, jdbcType=VARCHAR}
+            </if>
+            <if test="origin != null">
+                AND a.origin = #{origin, jdbcType=SMALLINT}
+            </if>
+            <if test="fromWeb != null">
+                AND a.from_web = #{fromWeb, jdbcType=VARCHAR}
+            </if>
+            <if test="customerName != null">
+                AND a.customer_name like #{customerName, jdbcType=VARCHAR}"%"
+            </if>
+            <if test="staffCount != null">
+                AND a.staff_count = #{staffCount, jdbcType=SMALLINT}
+            </if>
+            <if test="workHours != null">
+                AND a.work_hours = #{workHours, jdbcType=SMALLINT}
+            </if>
+            <if test="customerAddress != null">
+                AND a.customer_address = #{customerAddress, jdbcType=VARCHAR}
+            </if>
+            <if test="amount != null">
+                AND a.amount = #{amount, jdbcType=DECIMAL}
+            </if>
+            <if test="mobileNo != null">
+                AND a.mobile_no = #{mobileNo, jdbcType=VARCHAR}
+            </if>
+            <if test="bookStartDate != null">
+                AND a.book_start_date = #{bookStartDate, jdbcType=TIMESTAMP}
+            </if>
+            <if test="bookEndDate != null">
+                AND a.book_end_date = #{bookEndDate, jdbcType=TIMESTAMP}
+            </if>
+            <if test="queryStartDate != null">
+                AND a.create_date <![CDATA[>=]]> #{queryStartDate, jdbcType=TIMESTAMP}
+            </if>
+            <if test="queryEndDate != null">
+                AND a.create_date <![CDATA[<]]> #{queryEndDate, jdbcType=TIMESTAMP}
+            </if>
+            <if test="createUser != null">
+                AND a.create_user = #{createUser, jdbcType=VARCHAR}
+            </if>
+            <if test="remark != null">
+                AND a.remark = #{remark, jdbcType=VARCHAR}
+            </if>
+        </where>
+    </select>
+
+
+    <select id="selectNotDisOrderByVo" resultType="clean.platform.disorder.model.entity.vo.TbOrderVo"
+            parameterType="clean.platform.disorder.model.entity.vo.TbOrderVo">
+        SELECT
+        a.id,
+        a.customer_name,
+        a.mobile_no,
+        a.customer_address,
+        a.detail_info,
+        a.status,
+        b.origin_from,
+        a.order_no,
+        a.book_start_date
+        FROM tb_order a left join tb_origin b on a.origin = b.id
+        <where>
+            status in (1,4,5,6)
+            <if test="id != null">
+                AND a.id = #{id, jdbcType=BIGINT}
+            </if>
+            <if test="orderNo != null">
+                AND a.order_no = #{orderNo, jdbcType=VARBINARY}
+            </if>
+            <if test="status != null">
+                AND a.status = #{status, jdbcType=SMALLINT}
+            </if>
+            <if test="detailInfo != null">
+                AND a.detail_info = #{detailInfo, jdbcType=VARCHAR}
+            </if>
+            <if test="origin != null">
+                AND a.origin = #{origin, jdbcType=SMALLINT}
+            </if>
+            <if test="fromWeb != null">
+                AND a.from_web = #{fromWeb, jdbcType=VARCHAR}
+            </if>
+            <if test="customerName != null">
+                AND a.customer_name like #{customerName, jdbcType=VARCHAR}"%"
+            </if>
+            <if test="staffCount != null">
+                AND a.staff_count = #{staffCount, jdbcType=SMALLINT}
+            </if>
+            <if test="workHours != null">
+                AND a.work_hours = #{workHours, jdbcType=SMALLINT}
+            </if>
+            <if test="customerAddress != null">
+                AND a.customer_address = #{customerAddress, jdbcType=VARCHAR}
+            </if>
+            <if test="amount != null">
+                AND a.amount = #{amount, jdbcType=DECIMAL}
+            </if>
+            <if test="mobileNo != null">
+                AND a.mobile_no = #{mobileNo, jdbcType=VARCHAR}
+            </if>
+            <if test="bookStartDate != null">
+                AND a.book_start_date = #{bookStartDate, jdbcType=TIMESTAMP}
+            </if>
+            <if test="bookEndDate != null">
+                AND a.book_end_date = #{bookEndDate, jdbcType=TIMESTAMP}
+            </if>
+            <if test="queryStartDate != null">
+                AND a.create_date <![CDATA[>=]]> #{queryStartDate, jdbcType=TIMESTAMP}
+            </if>
+            <if test="queryEndDate != null">
+                AND a.create_date <![CDATA[<]]> #{queryEndDate, jdbcType=TIMESTAMP}
+            </if>
+            <if test="createUser != null">
+                AND a.create_user = #{createUser, jdbcType=VARCHAR}
+            </if>
+            <if test="remark != null">
+                AND a.remark = #{remark, jdbcType=VARCHAR}
+            </if>
+            <if test="orderNo != null">
+                AND a.order_no = #{orderNo, jdbcType=VARCHAR}
+            </if>
+        </where>
+    </select>
+
+    <select id="selectOrderByVo" resultType="clean.platform.disorder.model.entity.vo.TbOrderVo"
+            parameterType="clean.platform.disorder.model.entity.vo.TbOrderVo">
+        SELECT
+        a.id,
+        a.customer_name,
+        a.mobile_no,
+        a.customer_address,
+        a.detail_info,
+        a.status,
+        a.payment,
+        b.origin_from,
+        a.order_no,
+        a.amount,
+        a.create_date
+        FROM tb_order a left join tb_origin b on a.origin = b.id
+        <where>
+            status in (2,3,4,5,6,7)
+            <if test="id != null">
+                AND a.id = #{id, jdbcType=BIGINT}
+            </if>
+            <if test="orderNo != null">
+                AND a.order_no = #{orderNo, jdbcType=VARBINARY}
+            </if>
+            <if test="status != null">
+                AND a.status = #{status, jdbcType=SMALLINT}
+            </if>
+            <if test="detailInfo != null">
+                AND a.detail_info = #{detailInfo, jdbcType=VARCHAR}
+            </if>
+            <if test="origin != null">
+                AND a.origin = #{origin, jdbcType=SMALLINT}
+            </if>
+            <if test="fromWeb != null">
+                AND a.from_web = #{fromWeb, jdbcType=VARCHAR}
+            </if>
+            <if test="customerName != null">
+                AND a.customer_name like #{customerName, jdbcType=VARCHAR}"%"
+            </if>
+            <if test="staffCount != null">
+                AND a.staff_count = #{staffCount, jdbcType=SMALLINT}
+            </if>
+            <if test="workHours != null">
+                AND a.work_hours = #{workHours, jdbcType=SMALLINT}
+            </if>
+            <if test="customerAddress != null">
+                AND a.customer_address = #{customerAddress, jdbcType=VARCHAR}
+            </if>
+            <if test="amount != null">
+                AND a.amount = #{amount, jdbcType=DECIMAL}
+            </if>
+            <if test="mobileNo != null">
+                AND a.mobile_no = #{mobileNo, jdbcType=VARCHAR}
+            </if>
+            <if test="bookStartDate != null">
+                AND a.book_start_date = #{bookStartDate, jdbcType=TIMESTAMP}
+            </if>
+            <if test="bookEndDate != null">
+                AND a.book_end_date = #{bookEndDate, jdbcType=TIMESTAMP}
+            </if>
+            <if test="queryStartDate != null">
+                AND a.create_date <![CDATA[>=]]> #{queryStartDate, jdbcType=TIMESTAMP}
+            </if>
+            <if test="queryEndDate != null">
+                AND a.create_date <![CDATA[<]]> #{queryEndDate, jdbcType=TIMESTAMP}
+            </if>
+            <if test="createUser != null">
+                AND a.create_user = #{createUser, jdbcType=VARCHAR}
+            </if>
+            <if test="remark != null">
+                AND a.remark = #{remark, jdbcType=VARCHAR}
+            </if>
+            <!--<if test="amount !=null">-->
+            <!--AND a.amount =#{amount, jdbcType=decimal}-->
+            <!--</if>>-->
+        </where>
+    </select>
+
+    <update id="updateOrderStatus">
+		update tb_order set status = #{status, jdbcType=SMALLINT}
+		where id = #{id, jdbcType=BIGINT}
+	</update>
+    <update id="updateFinishOrderStatus">
+		update tb_finished_order set status = #{status, jdbcType=SMALLINT}
+		where order_id = #{id, jdbcType=BIGINT}
+	</update>
+
+
+    <select id="selectOrderStaff" resultType="clean.platform.disorder.model.entity.vo.TbStaffVo">
+		select
+		b.id,
+		b.staff_name
+		from tb_staff_order a left join tb_staff b on a.staff_id = b.id
+		where a.order_id = #{orderId, jdbcType=BIGINT} and b.is_active = 1 and b.is_delete = 0
+	</select>
+    <select id="selectJudgeFinsihOrder" resultType="clean.platform.disorder.model.entity.vo.JudgeFinishedOrderVo">
+		SELECT
+		b.id,
+		b.mobile_no,
+		b.detail_info,
+		b.order_no,
+		b.customer_address,
+		b.customer_name,
+        b.status,
+        c.staff_id
+		from
+         tb_finished_order a LEFT JOIN tb_order b on a.order_id = b.id
+          left join tb_staff_order c on c.staff_id=a.order_id
+          where b.customer_address  is not null
+          and b.order_no is not null and a.status in (1,2)
+	</select>
+    <select id="selectOrderNumber" resultType="java.util.Map">
+		SELECT COUNT(*) as num,   a.status as status from tb_finished_order a GROUP BY a.status
+        UNION
+        SELECT COUNT(*) as num ,b.status as status  from tb_order b  GROUP BY b.status
+	</select>
+    <select id="selectOrderFinishNumber" resultType="java.util.Map">
+       SELECT MONTH(b.create_date) as mth ,sum(b.income_amount) as money from tb_finished_order b  where b.status='3' GROUP BY MONTH(b.create_date) ORDER BY  MONTH(b.create_date)
+	</select>
+    <select id="selectFirstOrderFinishNumber" resultType="java.util.Map">
+		SELECT MONTH(a.book_start_date) as mth,sum(a.amount) as money  from tb_order a  where a.status='8' GROUP BY MONTH(a.book_start_date) ORDER BY  MONTH(a.book_start_date)
+	</select>
+    <select id="selectSevenOrderNumber" resultType="java.util.Map">
+        SELECT
+        SUM( income_amount ) as money
+        FROM
+        tb_finished_order
+        WHERE
+        DATE_SUB( CURDATE( ), INTERVAL 6 DAY ) <![CDATA[<=]]> date( create_date )
+        AND STATUS = '3'
+        GROUP BY
+        DATE_FORMAT( create_date, '%d.%m' )
+        ORDER BY
+        DATE_FORMAT( create_date, '%m' ),
+        DATE_FORMAT( create_date, '%d' )
+    </select>
+    <select id="selectSevenOrderNumber2" resultType="java.util.Map">
+  SELECT
+	DATE_FORMAT(create_date,'%m.%d') as mth
+FROM
+	tb_finished_order
+WHERE
+	DATE_SUB( CURDATE( ), INTERVAL 6 DAY ) <![CDATA[<=]]> date( create_date )
+	AND STATUS = '3'
+GROUP BY
+	DATE_FORMAT( create_date, '%d.%m' )
+ORDER BY
+	DATE_FORMAT( create_date, '%m' ),
+	DATE_FORMAT( create_date, '%d' )
+    </select>
+    <select id="selectOrinigOrderNumber" resultType="java.util.Map">
+      SELECT
+    count( * ) AS num,
+	a.origin AS origin
+
+FROM
+	tb_order a
+	LEFT JOIN tb_finished_order b ON a.id = b.order_id
+WHERE
+	b.STATUS = '3'
+	AND a.origin IS NOT NULL
+GROUP BY
+	a.origin
+ORDER BY
+	a.origin
+    </select>
+</mapper>

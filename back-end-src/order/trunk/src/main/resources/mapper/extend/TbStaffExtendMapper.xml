@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="clean.platform.disorder.mapper.extend.TbStaffExtendMapper">
+
+	<sql id="Base_Column_List">
+		id, staff_name, is_active, is_delete, department_name, title, create_time
+	</sql>
+
+	<!-- 根据id查询 -->
+	<select id="selectByPK" resultType="clean.platform.disorder.model.entity.vo.TbStaffVo">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM tb_staff
+		WHERE id = #{id, jdbcType=BIGINT}
+	</select>
+
+	<!-- 根据vo查询 -->
+	<select id="selectByVo" resultType="clean.platform.disorder.model.entity.vo.TbStaffVo"
+		parameterType="clean.platform.disorder.model.entity.vo.TbStaffVo">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM tb_staff
+		<where>
+			is_delete = 0
+			<if test="id != null">
+				AND id = #{id, jdbcType=BIGINT}
+			</if>
+			<if test="staffName != null">
+				AND staff_name = #{staffName, jdbcType=VARCHAR}
+			</if>
+			<if test="isActive != null">
+				AND is_active = #{isActive, jdbcType=SMALLINT}
+			</if>
+			<if test="departmentName != null">
+				AND department_name = #{departmentName, jdbcType=VARCHAR}
+			</if>
+			<if test="title != null">
+				AND title = #{title, jdbcType=VARCHAR}
+			</if>
+		</where>
+	</select>
+
+</mapper>

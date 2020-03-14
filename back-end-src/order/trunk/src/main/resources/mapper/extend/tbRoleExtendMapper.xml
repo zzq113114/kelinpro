@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="clean.platform.disorder.mapper.extend.TbRoleExtendMapper">
+
+	<sql id="Base_Column_List">
+		id, role_name, role_desc, is_active, is_delete
+	</sql>
+
+	<!-- 根据id查询 -->
+	<select id="selectByPK" resultType="clean.platform.disorder.model.entity.vo.TbRoleVo">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM tb_role
+		WHERE id = #{id, jdbcType=BIGINT}
+	</select>
+
+	<!-- 根据vo查询 -->
+	<select id="selectByVo" resultType="clean.platform.disorder.model.entity.vo.TbRoleVo"
+		parameterType="clean.platform.disorder.model.entity.vo.TbRoleVo">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM tb_role
+		<where>
+			<if test="id != null">
+				AND id = #{id, jdbcType=BIGINT}
+			</if>
+			<if test="roleName != null">
+				AND role_name = #{roleName, jdbcType=VARCHAR}
+			</if>
+			<if test="roleDesc != null">
+				AND role_desc = #{roleDesc, jdbcType=VARCHAR}
+			</if>
+			<if test="isActive != null">
+				AND is_active = #{isActive, jdbcType=SMALLINT}
+			</if>
+			<if test="isDelete != null">
+				AND is_delete = #{isDelete, jdbcType=SMALLINT}
+			</if>
+		</where>
+	</select>
+
+	<select id="selectFunMenuListByRole" resultType="clean.platform.disorder.model.entity.vo.TbFunMenuVo">
+		select
+		a.id,
+		a.menu_code,
+		a.menu_name,
+		a.path,
+		a.parent_id
+		from tb_fun_menu a
+		left join tb_role_menu b on  a.id = b.menu_id
+		left join tb_role c on c.id = b.role_id
+		where c.id = #{id, jdbcType=BIGINT}
+	</select>
+
+	<update id="deleteRole">
+		update tb_role
+		set is_delete = 1
+		where id = #{id, jdbcType=BIGINT}
+	</update>
+
+	<select id="queryRoleInfoByName" resultType="clean.platform.disorder.model.entity.vo.TbRoleVo"
+			parameterType="clean.platform.disorder.model.entity.vo.TbRoleVo">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM tb_role
+		<where>
+			is_delete = 0
+			<if test="roleName!=null and roleName!=''">
+				and role_name = #{roleName, jdbcType=VARCHAR}
+			</if>
+			<if test="id!=null">
+				and id = #{id, jdbcType=BIGINT}
+			</if>
+		</where>
+	</select>
+
+	<delete id="deleteRoleMenusByRoleId">
+		delete from tb_role_menu where role_id = #{roleId, jdbcType=BIGINT}
+	</delete>
+
+</mapper>

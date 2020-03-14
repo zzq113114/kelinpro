@@ -1,0 +1,1313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="326b2f8d-a046-45bd-84a1-ff2341b8aa7d" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/order/trunk/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="books@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/provider/OrderService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/TbOrderMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/TbFunMenuMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/TbFinishedOrderMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="646">
+              <caret line="43" selection-start-line="43" selection-end-line="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/TbDisOrderMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="3" column="39" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/order/trunk/src/main/resources/test/datasource-cfg.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="38" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/order/trunk/target/classes/datasource-cfg.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="58" selection-start-line="3" selection-start-column="58" selection-end-line="3" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/order/trunk/src/main/resources/dev/datasource-cfg.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/configuer/UIDGenerater.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/DisOrderApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindBugs-IDEA-Workspace">
+    <toolWindowEditorPreview>false</toolWindowEditorPreview>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>queryOrder</find>
+      <find>list</find>
+      <find>judge</find>
+      <find>selectOrderStaff</find>
+      <find>queryOrderPager</find>
+      <find>orderNo</find>
+      <find>queryJudgeOrderPageList</find>
+      <find>dispatch</find>
+      <find>notDisOrderPage</find>
+      <find>finishOrder</find>
+      <find>updateOrder</find>
+      <find>queryNotDisOrderPageList</find>
+      <find>queryJudgeOrderPager</find>
+      <find>totalCount</find>
+      <find>utf</find>
+      <find>staffsName</find>
+      <find>/order</find>
+      <find>judgeFinishOrder</find>
+      <find>分页查询订单信息失败</find>
+      <find>2</find>
+      <find>finish</find>
+      <find>tb_staff_order</find>
+      <find>7</find>
+      <find>8</find>
+      <find>resetOrder</find>
+      <find>fillJudgeOrderQuery</find>
+      <find>@create</find>
+      <find>jdbc:mysql</find>
+      <find>main</find>
+      <find>datasource</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>2019</replace>
+      <replace />
+    </replaceStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/model/query/QueryCompany.java" />
+        <option value="$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/model/query/BaseQuery.java" />
+        <option value="$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/model/query/QueryStaff.java" />
+        <option value="$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/provider/BaseService.java" />
+        <option value="$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/provider/CompanyService.java" />
+        <option value="$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/model/ConstDefiner.java" />
+        <option value="$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/model/query/QueryUser.java" />
+        <option value="$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/configuer/WebConfiguer.java" />
+        <option value="$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/configuer/TokenGenerator.java" />
+        <option value="$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/provider/RoleService.java" />
+        <option value="$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/model/ResponseResult.java" />
+        <option value="$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/exception/OperationException.java" />
+        <option value="$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/provider/UserService.java" />
+        <option value="$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/model/dto/CompanyVo.java" />
+        <option value="$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/controller/RoleController.java" />
+        <option value="$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/provider/StaffService.java" />
+        <option value="$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/model/dto/LoginUser.java" />
+        <option value="$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/TbCompanyMapper.java" />
+        <option value="$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/TbCompanyItemMapper.java" />
+        <option value="$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/TbStaffMapper.java" />
+        <option value="$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/TbStaffOrderMapper.java" />
+        <option value="$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/extend/TbCompanyExtendMapper.java" />
+        <option value="$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/extend/TbCompanyItemExtendMapper.java" />
+        <option value="$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/extend/TbFinishedOrderExtendMapper.java" />
+        <option value="$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/extend/TbDisOrderExtendMapper.java" />
+        <option value="$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/extend/TbFunMenuExtendMapper.java" />
+        <option value="$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/extend/TbOrderOriginExtendMapper.java" />
+        <option value="$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/extend/TbRoleExtendMapper.java" />
+        <option value="$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/extend/TbRoleMenuExtendMapper.java" />
+        <option value="$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/extend/TbServiceItemConfigExtendMapper.java" />
+        <option value="$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/extend/TbServiceItemExtendMapper.java" />
+        <option value="$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/extend/TbStaffExtendMapper.java" />
+        <option value="$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/extend/TbStaffOrderExtendMapper.java" />
+        <option value="$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/extend/TbUserExtendMapper.java" />
+        <option value="$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/extend/TbUserRoleExtendMapper.java" />
+        <option value="$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/TbDisOrderMapper.java" />
+        <option value="$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/TbFinishedOrderMapper.java" />
+        <option value="$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/TbUserRoleMapper.java" />
+        <option value="$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/TbUserMapper.java" />
+        <option value="$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/TbServiceItemMapper.java" />
+        <option value="$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/TbServiceItemConfigMapper.java" />
+        <option value="$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/TbRoleMenuMapper.java" />
+        <option value="$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/TbRoleMapper.java" />
+        <option value="$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/TbOriginMapper.java" />
+        <option value="$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/TbOrderOriginMapper.java" />
+        <option value="$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/TbOrderMapper.java" />
+        <option value="$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/TbFunMenuMapper.java" />
+        <option value="$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/provider/OrderService.java" />
+        <option value="$PROJECT_DIR$/order/trunk/src/main/resources/dev/datasource-cfg.properties" />
+      </list>
+    </option>
+  </component>
+  <component name="JRebelWorkspace">
+    <option name="jrebelEnabledAutocompile" value="true" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="userSettingsFile" value="$PROJECT_DIR$/../../../../apache-maven-3.6.1/conf/setting.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="dis-order" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="dis-order" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="dis-order" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="dis-order" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-235" />
+    <option name="y" value="264" />
+    <option name="width" value="1401" />
+    <option name="height" value="832" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="back-end-src" type="b2602c69:ProjectViewProjectNode" />
+              <item name="back-end-src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="back-end-src" type="b2602c69:ProjectViewProjectNode" />
+              <item name="back-end-src" type="462c0819:PsiDirectoryNode" />
+              <item name="order" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="back-end-src" type="b2602c69:ProjectViewProjectNode" />
+              <item name="back-end-src" type="462c0819:PsiDirectoryNode" />
+              <item name="order" type="462c0819:PsiDirectoryNode" />
+              <item name="trunk" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="back-end-src" type="b2602c69:ProjectViewProjectNode" />
+              <item name="back-end-src" type="462c0819:PsiDirectoryNode" />
+              <item name="order" type="462c0819:PsiDirectoryNode" />
+              <item name="trunk" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="back-end-src" type="b2602c69:ProjectViewProjectNode" />
+              <item name="back-end-src" type="462c0819:PsiDirectoryNode" />
+              <item name="order" type="462c0819:PsiDirectoryNode" />
+              <item name="trunk" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="back-end-src" type="b2602c69:ProjectViewProjectNode" />
+              <item name="back-end-src" type="462c0819:PsiDirectoryNode" />
+              <item name="order" type="462c0819:PsiDirectoryNode" />
+              <item name="trunk" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="back-end-src" type="b2602c69:ProjectViewProjectNode" />
+              <item name="back-end-src" type="462c0819:PsiDirectoryNode" />
+              <item name="order" type="462c0819:PsiDirectoryNode" />
+              <item name="trunk" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="clean" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="back-end-src" type="b2602c69:ProjectViewProjectNode" />
+              <item name="back-end-src" type="462c0819:PsiDirectoryNode" />
+              <item name="order" type="462c0819:PsiDirectoryNode" />
+              <item name="trunk" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="clean" type="462c0819:PsiDirectoryNode" />
+              <item name="platform" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="back-end-src" type="b2602c69:ProjectViewProjectNode" />
+              <item name="back-end-src" type="462c0819:PsiDirectoryNode" />
+              <item name="order" type="462c0819:PsiDirectoryNode" />
+              <item name="trunk" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="clean" type="462c0819:PsiDirectoryNode" />
+              <item name="platform" type="462c0819:PsiDirectoryNode" />
+              <item name="disorder" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="back-end-src" type="b2602c69:ProjectViewProjectNode" />
+              <item name="back-end-src" type="462c0819:PsiDirectoryNode" />
+              <item name="order" type="462c0819:PsiDirectoryNode" />
+              <item name="trunk" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="clean" type="462c0819:PsiDirectoryNode" />
+              <item name="platform" type="462c0819:PsiDirectoryNode" />
+              <item name="disorder" type="462c0819:PsiDirectoryNode" />
+              <item name="configuer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="back-end-src" type="b2602c69:ProjectViewProjectNode" />
+              <item name="back-end-src" type="462c0819:PsiDirectoryNode" />
+              <item name="order" type="462c0819:PsiDirectoryNode" />
+              <item name="trunk" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="clean" type="462c0819:PsiDirectoryNode" />
+              <item name="platform" type="462c0819:PsiDirectoryNode" />
+              <item name="disorder" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="back-end-src" type="b2602c69:ProjectViewProjectNode" />
+              <item name="back-end-src" type="462c0819:PsiDirectoryNode" />
+              <item name="order" type="462c0819:PsiDirectoryNode" />
+              <item name="trunk" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="clean" type="462c0819:PsiDirectoryNode" />
+              <item name="platform" type="462c0819:PsiDirectoryNode" />
+              <item name="disorder" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="back-end-src" type="b2602c69:ProjectViewProjectNode" />
+              <item name="back-end-src" type="462c0819:PsiDirectoryNode" />
+              <item name="order" type="462c0819:PsiDirectoryNode" />
+              <item name="trunk" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="clean" type="462c0819:PsiDirectoryNode" />
+              <item name="platform" type="462c0819:PsiDirectoryNode" />
+              <item name="disorder" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+              <item name="extend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="back-end-src" type="b2602c69:ProjectViewProjectNode" />
+              <item name="back-end-src" type="462c0819:PsiDirectoryNode" />
+              <item name="order" type="462c0819:PsiDirectoryNode" />
+              <item name="trunk" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="clean" type="462c0819:PsiDirectoryNode" />
+              <item name="platform" type="462c0819:PsiDirectoryNode" />
+              <item name="disorder" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="back-end-src" type="b2602c69:ProjectViewProjectNode" />
+              <item name="back-end-src" type="462c0819:PsiDirectoryNode" />
+              <item name="order" type="462c0819:PsiDirectoryNode" />
+              <item name="trunk" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="clean" type="462c0819:PsiDirectoryNode" />
+              <item name="platform" type="462c0819:PsiDirectoryNode" />
+              <item name="disorder" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="query" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="back-end-src" type="b2602c69:ProjectViewProjectNode" />
+              <item name="back-end-src" type="462c0819:PsiDirectoryNode" />
+              <item name="order" type="462c0819:PsiDirectoryNode" />
+              <item name="trunk" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="back-end-src" type="b2602c69:ProjectViewProjectNode" />
+              <item name="back-end-src" type="462c0819:PsiDirectoryNode" />
+              <item name="order" type="462c0819:PsiDirectoryNode" />
+              <item name="trunk" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="dev" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="back-end-src" type="b2602c69:ProjectViewProjectNode" />
+              <item name="back-end-src" type="462c0819:PsiDirectoryNode" />
+              <item name="order" type="462c0819:PsiDirectoryNode" />
+              <item name="trunk" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="back-end-src" type="b2602c69:ProjectViewProjectNode" />
+              <item name="back-end-src" type="462c0819:PsiDirectoryNode" />
+              <item name="order" type="462c0819:PsiDirectoryNode" />
+              <item name="trunk" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="back-end-src" type="b2602c69:ProjectViewProjectNode" />
+              <item name="back-end-src" type="462c0819:PsiDirectoryNode" />
+              <item name="order" type="462c0819:PsiDirectoryNode" />
+              <item name="trunk" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="back-end-src" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1584172633591" />
+    <property name="database.console.LAST_STATE" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.proportion" value="0.15625" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="clean.platform.disorder.provider" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/order/trunk/src/main/resources" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.DisOrderApplication">
+    <configuration name="UIDGenerater" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="clean.platform.disorder.configuer.UIDGenerater" />
+      <module name="dis-order" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="clean.platform.disorder.configuer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DisOrderApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="dis-order" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="clean.platform.disorder.DisOrderApplication" />
+      <option name="ENABLE_JMX_AGENT" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.UIDGenerater" />
+      <item itemvalue="Spring Boot.DisOrderApplication" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="326b2f8d-a046-45bd-84a1-ff2341b8aa7d" name="Default Changelist" comment="" />
+      <created>1560996767965</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1560996767965</updated>
+      <workItem from="1560996770542" duration="6683000" />
+      <workItem from="1563695356255" duration="507000" />
+      <workItem from="1563697004964" duration="2910000" />
+      <workItem from="1563700977481" duration="1525000" />
+      <workItem from="1563703444352" duration="4711000" />
+      <workItem from="1563801506003" duration="98000" />
+      <workItem from="1563895623924" duration="96000" />
+      <workItem from="1563976620307" duration="308000" />
+      <workItem from="1563978838475" duration="382000" />
+      <workItem from="1563979296498" duration="437000" />
+      <workItem from="1564052335869" duration="661000" />
+      <workItem from="1564107411939" duration="552000" />
+      <workItem from="1564136185292" duration="496000" />
+      <workItem from="1564319470379" duration="594000" />
+      <workItem from="1565612499306" duration="106000" />
+      <workItem from="1565612724169" duration="2000" />
+      <workItem from="1565921936646" duration="18000" />
+      <workItem from="1565921985835" duration="836000" />
+      <workItem from="1566090168430" duration="261000" />
+      <workItem from="1566220075220" duration="2041000" />
+      <workItem from="1566261811820" duration="1114000" />
+      <workItem from="1566308393232" duration="20000" />
+      <workItem from="1566355166553" duration="610000" />
+      <workItem from="1566356547711" duration="616000" />
+      <workItem from="1566484188836" duration="1000" />
+      <workItem from="1566789807792" duration="999000" />
+      <workItem from="1566798582943" duration="226000" />
+      <workItem from="1567161206266" duration="575000" />
+      <workItem from="1567219261720" duration="286000" />
+      <workItem from="1567221167520" duration="37000" />
+      <workItem from="1568166355802" duration="32000" />
+      <workItem from="1570604239605" duration="553000" />
+      <workItem from="1571054189424" duration="1810000" />
+      <workItem from="1571100767809" duration="947000" />
+      <workItem from="1571117460685" duration="299000" />
+      <workItem from="1571117877642" duration="2303000" />
+      <workItem from="1571121179444" duration="4186000" />
+      <workItem from="1571133879063" duration="238000" />
+      <workItem from="1571138801034" duration="1190000" />
+      <workItem from="1571143096825" duration="218000" />
+      <workItem from="1571143373922" duration="69000" />
+      <workItem from="1571143622803" duration="490000" />
+      <workItem from="1571144225875" duration="764000" />
+      <workItem from="1571194260044" duration="5292000" />
+      <workItem from="1571463132610" duration="8698000" />
+      <workItem from="1572832607424" duration="859000" />
+      <workItem from="1572923405094" duration="577000" />
+      <workItem from="1573451861774" duration="2254000" />
+      <workItem from="1573476419701" duration="600000" />
+      <workItem from="1574854165065" duration="1335000" />
+      <workItem from="1574855964125" duration="1227000" />
+      <workItem from="1574928848972" duration="7734000" />
+      <workItem from="1574989145989" duration="10949000" />
+      <workItem from="1575029383787" duration="957000" />
+      <workItem from="1575272113937" duration="14197000" />
+      <workItem from="1575366835275" duration="272000" />
+      <workItem from="1575452694726" duration="242000" />
+      <workItem from="1575454126770" duration="328000" />
+      <workItem from="1575454955315" duration="703000" />
+      <workItem from="1575619965200" duration="2250000" />
+      <workItem from="1575726581694" duration="545000" />
+      <workItem from="1575869975244" duration="268000" />
+      <workItem from="1575871134388" duration="627000" />
+      <workItem from="1575944472857" duration="323000" />
+      <workItem from="1575944926210" duration="1012000" />
+      <workItem from="1576056191730" duration="594000" />
+      <workItem from="1576058858106" duration="90000" />
+      <workItem from="1576219909787" duration="91000" />
+      <workItem from="1576220221657" duration="825000" />
+      <workItem from="1576221642770" duration="54000" />
+      <workItem from="1576235752364" duration="342000" />
+      <workItem from="1576236249985" duration="6879000" />
+      <workItem from="1576381435227" duration="2203000" />
+      <workItem from="1576554262868" duration="756000" />
+      <workItem from="1576564465278" duration="1708000" />
+      <workItem from="1576729139811" duration="4669000" />
+      <workItem from="1576736238704" duration="387000" />
+      <workItem from="1576739866217" duration="180000" />
+      <workItem from="1576742115718" duration="117000" />
+      <workItem from="1577252736132" duration="6717000" />
+      <workItem from="1577322073430" duration="226000" />
+      <workItem from="1577346039351" duration="1488000" />
+      <workItem from="1577365673449" duration="307000" />
+      <workItem from="1577422590868" duration="1643000" />
+      <workItem from="1578388190821" duration="956000" />
+      <workItem from="1578462141815" duration="767000" />
+      <workItem from="1578535760009" duration="1280000" />
+      <workItem from="1580024479361" duration="2910000" />
+      <workItem from="1580029558579" duration="1405000" />
+      <workItem from="1580390824188" duration="2410000" />
+      <workItem from="1580434532416" duration="9000" />
+      <workItem from="1580434638902" duration="2901000" />
+      <workItem from="1580609116944" duration="26153000" />
+      <workItem from="1580647357938" duration="1780000" />
+      <workItem from="1580651539989" duration="5164000" />
+      <workItem from="1580691476016" duration="3084000" />
+      <workItem from="1581829336588" duration="66000" />
+      <workItem from="1581829506626" duration="22352000" />
+      <workItem from="1581997779482" duration="22002000" />
+      <workItem from="1583562703374" duration="5068000" />
+      <workItem from="1584169381013" duration="840000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="230479000" />
+  </component>
+  <component name="TodoView" selected-index="2">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="172" y="41" width="1401" height="832" extended-state="0" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7004104" visible="true" weight="0.21412803" />
+      <window_info id="Structure" order="1" sideWeight="0.30054644" side_tool="true" weight="0.32965416" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" sideWeight="0.75119615" side_tool="true" weight="0.24313408" />
+      <window_info id="JRebel" order="8" sideWeight="0.75095785" side_tool="true" weight="0.2700515" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49192247" visible="true" weight="0.56216216" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4927302" weight="0.47244096" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49919224" weight="0.26115486" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49959967" weight="0.3205575" />
+      <window_info anchor="bottom" id="Spring" order="8" sideWeight="0.49959967" weight="0.32829046" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5072698" side_tool="true" weight="0.4738676" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" sideWeight="0.49959967" weight="0.32980332" />
+      <window_info anchor="bottom" id="Database Changes" order="12" weight="0.32867134" />
+      <window_info anchor="bottom" id="Version Control" order="13" />
+      <window_info anchor="bottom" id="Messages" order="14" weight="0.18766405" />
+      <window_info anchor="bottom" id="Database Console" order="15" weight="0.6" />
+      <window_info anchor="bottom" id="Bucklescript" order="16" weight="0.32752612" />
+      <window_info anchor="bottom" id="JRebel Console" order="17" sideWeight="0.50807756" side_tool="true" weight="0.44356954" />
+      <window_info anchor="bottom" id="JRebel Executor" order="18" sideWeight="0.4983845" weight="0.27296588" />
+      <window_info anchor="bottom" id="Problems" order="19" sideWeight="0.49919224" weight="0.32868758" />
+      <window_info anchor="bottom" id="FindBugs-IDEA" order="20" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24960753" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" sideWeight="0.496063" weight="0.30978662" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" weight="0.2737307" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" weight="0.32875606" />
+      <window_info anchor="right" id="Word Book" order="10" sideWeight="0.503937" side_tool="true" weight="0.33117932" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7004104" visible="true" weight="0.32965416" />
+      <window_info id="Structure" order="1" sideWeight="0.30054644" side_tool="true" visible="true" weight="0.32965416" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" sideWeight="0.75119615" side_tool="true" weight="0.24313408" />
+      <window_info id="JRebel" order="8" sideWeight="0.75095785" side_tool="true" weight="0.2700515" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49192247" visible="true" weight="0.03937008" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4927302" weight="0.47244096" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49919224" weight="0.26115486" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49959967" weight="0.3205575" />
+      <window_info anchor="bottom" id="Spring" order="8" sideWeight="0.49959967" weight="0.32829046" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5072698" side_tool="true" weight="0.4738676" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" sideWeight="0.49959967" weight="0.32980332" />
+      <window_info anchor="bottom" id="Database Changes" order="12" weight="0.32867134" />
+      <window_info anchor="bottom" id="Version Control" order="13" />
+      <window_info anchor="bottom" id="Messages" order="14" weight="0.18766405" />
+      <window_info anchor="bottom" id="Database Console" order="15" weight="0.6" />
+      <window_info anchor="bottom" id="Bucklescript" order="16" weight="0.32752612" />
+      <window_info anchor="bottom" id="JRebel Console" order="17" sideWeight="0.50807756" side_tool="true" weight="0.44356954" />
+      <window_info anchor="bottom" id="JRebel Executor" order="18" sideWeight="0.4983845" weight="0.27296588" />
+      <window_info anchor="bottom" id="Problems" order="19" sideWeight="0.49919224" weight="0.32868758" />
+      <window_info anchor="bottom" id="FindBugs-IDEA" order="20" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24960753" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" sideWeight="0.496063" weight="0.30978662" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" weight="0.2737307" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" weight="0.32875606" />
+      <window_info anchor="right" id="Word Book" order="10" sideWeight="0.503937" side_tool="true" weight="0.33117932" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/provider/OrderService.java</url>
+          <line>401</line>
+          <properties />
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/provider/OrderService.java</url>
+          <line>382</line>
+          <properties />
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/controller/OrderController.java</url>
+          <line>196</line>
+          <properties />
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/controller/OrderController.java</url>
+          <line>95</line>
+          <properties />
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/controller/OrderController.java</url>
+          <line>204</line>
+          <properties />
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/provider/OrderService.java</url>
+          <line>186</line>
+          <properties />
+          <option name="timeStamp" value="65" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/provider/OrderService.java</url>
+          <line>394</line>
+          <properties />
+          <option name="timeStamp" value="66" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/provider/OrderService.java</url>
+          <line>196</line>
+          <properties />
+          <option name="timeStamp" value="73" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/facade/IOrderFacade.java</url>
+          <line>138</line>
+          <properties class="clean.platform.disorder.facade.IOrderFacade" method="selectOrderNumber" />
+          <option name="timeStamp" value="63" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/provider/BaseService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/provider/CompanyService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="38" column="15" selection-start-line="38" selection-start-column="15" selection-end-line="38" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/model/ConstDefiner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/model/query/QueryUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/configuer/WebConfiguer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/configuer/TokenGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/provider/RoleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/model/ResponseResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/exception/OperationException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/provider/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/model/dto/CompanyVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/controller/RoleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/provider/StaffService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/model/dto/LoginUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" column="8" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/extend/TbCompanyExtendMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/extend/TbCompanyItemExtendMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/extend/TbDisOrderExtendMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/extend/TbFinishedOrderExtendMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/extend/TbFunMenuExtendMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="20" column="6" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/extend/TbOrderOriginExtendMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/extend/TbRoleExtendMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/extend/TbRoleMenuExtendMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/extend/TbServiceItemConfigExtendMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/extend/TbServiceItemExtendMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="20" column="6" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/extend/TbStaffExtendMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="20" column="6" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/extend/TbStaffOrderExtendMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/extend/TbUserExtendMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="451">
+          <caret line="35" column="7" selection-start-line="35" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/extend/TbUserRoleExtendMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/TbCompanyItemMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/TbCompanyMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/TbUserRoleMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/TbUserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/TbStaffOrderMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="32" column="4" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/TbStaffMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/TbServiceItemMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/TbServiceItemConfigMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/TbRoleMenuMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/TbRoleMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/TbOriginMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/TbOrderOriginMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/provider/OrderService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/TbOrderMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/TbFunMenuMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/TbFinishedOrderMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/mapper/TbDisOrderMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="3" column="39" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order/trunk/src/main/resources/test/datasource-cfg.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="38" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order/trunk/src/main/resources/dev/datasource-cfg.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/configuer/UIDGenerater.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order/trunk/src/main/java/clean/platform/disorder/DisOrderApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order/trunk/target/classes/datasource-cfg.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="58" selection-start-line="3" selection-start-column="58" selection-end-line="3" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>dis-order:war</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>ExtJs3.4.1</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>back-end-src</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: com.alibaba:druid:1.0.28</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

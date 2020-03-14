@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="clean.platform.disorder.mapper.extend.TbStaffOrderExtendMapper">
+
+	<sql id="Base_Column_List">
+		staff_id, order_id
+	</sql>
+
+	<!-- 根据id查询 -->
+	<select id="selectByPK" resultType="clean.platform.disorder.model.entity.vo.TbStaffOrderVo">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM tb_staff_order
+		WHERE id = #{id, jdbcType=BIGINT}
+	</select>
+
+	<!-- 根据vo查询 -->
+	<select id="selectByVo" resultType="clean.platform.disorder.model.entity.vo.TbStaffOrderVo"
+		parameterType="clean.platform.disorder.model.entity.vo.TbStaffOrderVo">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM tb_staff_order
+		<where>
+			<if test="staffId != null">
+				AND staff_id = #{staffId, jdbcType=BIGINT}
+			</if>
+			<if test="orderId != null">
+				AND order_id = #{orderId, jdbcType=BIGINT}
+			</if>
+		</where>
+	</select>
+
+</mapper>

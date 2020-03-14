@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="clean.platform.disorder.mapper.TbOrderMapper">
+
+	<resultMap id="BaseResultMap" type="clean.platform.disorder.model.entity.TbOrder">
+		<id column="id" property="id" jdbcType="BIGINT" />
+		<result column="order_no" property="orderNo" jdbcType="VARBINARY" />
+		<result column="origin_order_id" property="originOrderId" jdbcType="BIGINT"/>
+		<result column="status" property="status" jdbcType="SMALLINT" />
+		<result column="detail_info" property="detailInfo" jdbcType="VARCHAR" />
+		<result column="origin" property="origin" jdbcType="INTEGER" />
+		<result column="from_web" property="fromWeb" jdbcType="VARCHAR" />
+		<result column="customer_name" property="customerName" jdbcType="VARCHAR" />
+		<result column="customer_address" property="customerAddress" jdbcType="VARCHAR" />
+		<result column="staff_count" property="staffCount" jdbcType="SMALLINT"/>
+		<result column="work_hours" property="workHours" jdbcType="SMALLINT" />
+		<result column="amount" property="amount" jdbcType="DECIMAL" />
+		<result column="mobile_no" property="mobileNo" jdbcType="BIGINT"/>
+		<result column="payment" property="payment" jdbcType="INTEGER" />
+		<result column="book_start_date" property="bookStartDate" jdbcType="TIMESTAMP" />
+		<result column="book_end_date" property="bookEndDate" jdbcType="TIMESTAMP" />
+		<result column="create_date" property="createDate" jdbcType="TIMESTAMP" />
+		<result column="create_user" property="createUser" jdbcType="VARCHAR" />
+		<result column="remark" property="remark" jdbcType="VARCHAR" />
+	</resultMap>
+
+	<sql id="Base_Column_List">
+		id, order_no,origin_order_id, status, detail_info, origin, from_web, customer_name,staff_count,work_hours, customer_address, amount,mobile_no,payment, book_start_date, book_end_date, create_date, create_user, remark
+	</sql>
+
+	<!-- 根据pk查询 -->
+	<select id="selectByPrimaryKey" resultMap="BaseResultMap"
+		parameterType="java.lang.Long">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM tb_order
+		WHERE id = #{id, jdbcType=BIGINT}
+	</select>
+
+	<!-- 根据pk删除 -->
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+		DELETE FROM tb_order
+		WHERE id = #{id, jdbcType=BIGINT}
+	</delete>
+
+	<!-- 新增 -->
+	<insert id="insert" parameterType="clean.platform.disorder.model.entity.TbOrder">
+		INSERT INTO tb_order
+		(id,order_no,origin_order_id, status, detail_info, origin, from_web, customer_name,staff_count,work_hours,
+		customer_address, amount,mobile_no,payment, book_start_date, book_end_date, create_date, create_user, remark)
+		VALUES (#{id,jdbcType=BIGINT},#{orderNo, jdbcType=VARBINARY},
+		#{originOrderId,jdbcType=BIGINT},#{status, jdbcType=SMALLINT},
+		#{detailInfo, jdbcType=VARCHAR}, #{origin, jdbcType=INTEGER},
+		#{fromWeb, jdbcType=VARCHAR}, #{customerName, jdbcType=VARCHAR},#{staffCount,jdbcType=SMALLINT},
+		#{workHours, jdbcType=SMALLINT},
+		#{customerAddress, jdbcType=VARCHAR}, #{amount, jdbcType=DECIMAL},#{mobileNo, jdbcType=VARCHAR},
+		#{payment, jdbcType=INTEGER},
+		#{bookStartDate, jdbcType=TIMESTAMP}, #{bookEndDate, jdbcType=TIMESTAMP}, 
+		#{createDate, jdbcType=TIMESTAMP}, #{createUser, jdbcType=VARCHAR}, 
+		#{remark, jdbcType=VARCHAR})
+	</insert>
+
+	<!-- 新增 -->
+	<insert id="insertSelective" parameterType="clean.platform.disorder.model.entity.TbOrder">
+		INSERT INTO tb_order
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				id,
+			</if>
+			<if test="orderNo != null">
+				order_no,
+			</if>
+			<if test="originOrderId != null">
+				origin_order_id,
+			</if>
+			<if test="status != null">
+				status,
+			</if>
+			<if test="detailInfo != null">
+				detail_info,
+			</if>
+			<if test="origin != null">
+				origin,
+			</if>
+			<if test="fromWeb != null">
+				from_web,
+			</if>
+			<if test="customerName != null">
+				customer_name,
+			</if>
+			<if test="staffCount != null">
+				staff_count,
+			</if>
+			<if test="workHours != null">
+				work_hours,
+			</if>
+			<if test="customerAddress != null">
+				customer_address,
+			</if>
+			<if test="amount != null">
+				amount,
+			</if>
+			<if test="mobileNo != null">
+				mobile_no,
+			</if>
+			<if test="payment != null">
+				payment,
+			</if>
+			<if test="bookStartDate != null">
+				book_start_date,
+			</if>
+			<if test="bookEndDate != null">
+				book_end_date,
+			</if>
+			<if test="createDate != null">
+				create_date,
+			</if>
+			<if test="createUser != null">
+				create_user,
+			</if>
+			<if test="remark != null">
+				remark,
+			</if>
+		</trim>
+		<trim prefix="VALUES (" suffix=")" suffixOverrides=",">
+			<if test="id!=null">
+				#{id, jdbcType=BIGINT},
+			</if>
+			<if test="orderNo != null">
+				#{orderNo,jdbcType=VARBINARY},
+			</if>
+			<if test="originOrderId!=null">
+				#{origin_order_id,jdbcType=BIGINT},
+			</if>
+			<if test="status != null">
+				#{status,jdbcType=SMALLINT},
+			</if>
+			<if test="detailInfo != null">
+				#{detailInfo,jdbcType=VARCHAR},
+			</if>
+			<if test="origin != null">
+				#{origin,jdbcType=INTEGER},
+			</if>
+			<if test="fromWeb != null">
+				#{fromWeb,jdbcType=VARCHAR},
+			</if>
+			<if test="customerName != null">
+				#{customerName,jdbcType=VARCHAR},
+			</if>
+			<if test="staffCount != null">
+				#{staffCount, jdbcType=SMALLINT},
+			</if>
+			<if test="workHours != null">
+				#{workHours, jdbcType=SMALLINT},
+			</if>
+			<if test="customerAddress != null">
+				#{customerAddress,jdbcType=VARCHAR},
+			</if>
+			<if test="amount != null">
+				#{amount,jdbcType=DECIMAL},
+			</if>
+			<if test="mobileNo != null">
+				#{mobileNo, jdbcType = VARCHAR},
+			</if>
+			<if test="payment != null">
+				#{payment, jdbcType = INTEGER},
+			</if>
+			<if test="bookStartDate != null">
+				#{bookStartDate,jdbcType=TIMESTAMP},
+			</if>
+			<if test="bookEndDate != null">
+				#{bookEndDate,jdbcType=TIMESTAMP},
+			</if>
+			<if test="createDate != null">
+				#{createDate,jdbcType=TIMESTAMP},
+			</if>
+			<if test="createUser != null">
+				#{createUser,jdbcType=VARCHAR},
+			</if>
+			<if test="remark != null">
+				#{remark,jdbcType=VARCHAR},
+			</if>
+		</trim>
+	</insert>
+
+	<!-- 批量新增 -->
+	<insert id="insertBatch" parameterType="java.util.List" useGeneratedKeys="true" keyProperty="id">
+		INSERT INTO tb_order
+		(id,order_no,origin_order_id, status, detail_info, origin, from_web, customer_name,staff_count,work_hours, customer_address, amount,mobile_no,payment, book_start_date, book_end_date, create_date, create_user, remark)
+		VALUES
+		<foreach collection="list" item="item" index="index" separator=",">  
+		(#{item.id, jdbcType=BIGINT},#{item.orderNo, jdbcType=VARBINARY},
+		#{item.originOrderId,jdbcType = BIGINT},#{item.status, jdbcType=SMALLINT},
+		#{item.detailInfo, jdbcType=VARCHAR}, #{item.origin, jdbcType=INTEGER},
+		#{item.fromWeb, jdbcType=VARCHAR}, #{item.customerName, jdbcType=VARCHAR},
+		#{item.staffCount, jdbcType=SMALLINT},#{item.workHours, jdbcType=SMALLINT},
+		#{item.customerAddress, jdbcType=VARCHAR}, #{item.amount, jdbcType=DECIMAL},
+		#{mobileNo, jdbcType=VARCHAR},#{payment, jdbcType=INTEGER},
+		#{item.bookStartDate, jdbcType=TIMESTAMP}, #{item.bookEndDate, jdbcType=TIMESTAMP}, 
+		#{item.createDate, jdbcType=TIMESTAMP}, #{item.createUser, jdbcType=VARCHAR}, 
+		#{item.remark, jdbcType=VARCHAR})
+		</foreach>
+	</insert>
+
+	<!-- 根据pk更新 -->
+	<update id="updateByPrimaryKeySelective" parameterType="clean.platform.disorder.model.entity.TbOrder">
+		UPDATE tb_order
+		<set>
+			<if test="orderNo != null">
+				order_no = #{orderNo, jdbcType=VARBINARY},
+			</if>
+			<if test="originOrderId != null">
+				origin_order_id = #{originOrderId, jdbcType=BIGINT},
+			</if>
+			<if test="status != null">
+				status = #{status, jdbcType=SMALLINT},
+			</if>
+			<if test="detailInfo != null">
+				detail_info = #{detailInfo, jdbcType=VARCHAR},
+			</if>
+			<if test="origin != null">
+				origin = #{origin, jdbcType=INTEGER},
+			</if>
+			<if test="fromWeb != null">
+				from_web = #{fromWeb, jdbcType=VARCHAR},
+			</if>
+			<if test="customerName != null">
+				customer_name = #{customerName, jdbcType=VARCHAR},
+			</if>
+			<if test="staffCount != null">
+				staff_count = #{staffCount, jdbcType=SMALLINT},
+			</if>
+			<if test="workHours != null">
+				work_hours = #{workHours, jdbcType=SMALLINT},
+			</if>
+			<if test="customerAddress != null">
+				customer_address = #{customerAddress, jdbcType=VARCHAR},
+			</if>
+			<if test="amount != null">
+				amount = #{amount, jdbcType=DECIMAL},
+			</if>
+			<if test="mobileNo != null">
+				mobile_no = #{mobileNo, jdbcType= VARCHAR},
+			</if>
+			<if test="payment != null">
+				payment = #{payment, jdbcType = INTEGER},
+			</if>
+			<if test="bookStartDate != null">
+				book_start_date = #{bookStartDate, jdbcType=TIMESTAMP},
+			</if>
+			<if test="bookEndDate != null">
+				book_end_date = #{bookEndDate, jdbcType=TIMESTAMP},
+			</if>
+			<if test="createDate != null">
+				create_date = #{createDate, jdbcType=TIMESTAMP},
+			</if>
+			<if test="createUser != null">
+				create_user = #{createUser, jdbcType=VARCHAR},
+			</if>
+			<if test="remark != null">
+				remark = #{remark, jdbcType=VARCHAR},
+			</if>
+		</set>
+		WHERE id = #{id, jdbcType=BIGINT}
+	</update>
+
+	<!-- 根据pk更新 -->
+	<update id="updateByPrimaryKey" parameterType="clean.platform.disorder.model.entity.TbOrder">
+		UPDATE tb_order
+		set 
+		order_no = #{orderNo, jdbcType=VARBINARY},
+		origin_order_id = #{originOrderId,jdbcType=BIGINT},
+		status = #{status, jdbcType=SMALLINT},
+		detail_info = #{detailInfo, jdbcType=VARCHAR},
+		origin = #{origin, jdbcType=INTEGER},
+		from_web = #{fromWeb, jdbcType=VARCHAR},
+		customer_name = #{customerName, jdbcType=VARCHAR},
+		staff_count = #{staffCount, jdbcType=SMALLINT},
+		work_hours = #{workHours, jdbcType=SMALLINT},
+		customer_address = #{customerAddress, jdbcType=VARCHAR},
+		amount = #{amount, jdbcType=DECIMAL},
+		mobile_no = #{mobileNo, jdbcType=VARCHAR},
+		payment = #{payment, jdbcType = INTEGER},
+		book_start_date = #{bookStartDate, jdbcType=TIMESTAMP},
+		book_end_date = #{bookEndDate, jdbcType=TIMESTAMP},
+		create_date = #{createDate, jdbcType=TIMESTAMP},
+		create_user = #{createUser, jdbcType=VARCHAR},
+		remark = #{remark, jdbcType=VARCHAR}
+		WHERE id = #{id, jdbcType=BIGINT}
+	</update>
+
+</mapper>

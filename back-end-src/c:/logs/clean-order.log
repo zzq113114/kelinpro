@@ -1,0 +1,374 @@
+-----------启动服务---------------
+Starting DisOrderApplication on userlocal.local with PID 48970 (/Volumes/FileHome/Asecc/kelinpro/jiazhengPro/back-end-src/order/trunk/target/classes started by zhangzhenqing in /Volumes/FileHome/Asecc/kelinpro/jiazhengPro/back-end-src)
+Running with Spring Boot v2.0.6.RELEASE, Spring v5.0.10.RELEASE
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6950ed69: startup date [Sat Mar 14 15:03:16 CST 2020]; root of context hierarchy
+Tomcat initialized with port(s): 9800 (http)
+Root WebApplicationContext: initialization completed in 1920 ms
+Servlet dispatcherServlet mapped to [/]
+Mapping filter: 'characterEncodingFilter' to: [/*]
+--------------创建分布式ID生成器---------------------
+*****************主数据源初始化********************
+*****************主数据源初始化成功******************
+**********************创建分页对象****************************
+-------------------------网关跨域访问设值--------------------------
+Mapped "{[/company/itemConfig/save],methods=[POST]}" onto public clean.platform.disorder.model.ResponseResult<?> clean.platform.disorder.controller.CompanyController.saveCompanyItemConfig(clean.platform.disorder.model.entity.vo.TbServiceItemConfigVo)
+Mapped "{[/company/add],methods=[POST]}" onto public clean.platform.disorder.model.ResponseResult<?> clean.platform.disorder.controller.CompanyController.addCompany(clean.platform.disorder.model.dto.CompanyVo)
+Mapped "{[/company/modify],methods=[POST]}" onto public clean.platform.disorder.model.ResponseResult<?> clean.platform.disorder.controller.CompanyController.modifyCompany(clean.platform.disorder.model.dto.CompanyVo)
+Mapped "{[/company/delete/{id}],methods=[GET]}" onto public clean.platform.disorder.model.ResponseResult<?> clean.platform.disorder.controller.CompanyController.deleteCompany(java.lang.Long)
+Mapped "{[/company/page],methods=[POST]}" onto public clean.platform.disorder.model.ResponseResult<com.github.pagehelper.PageInfo<clean.platform.disorder.model.entity.vo.TbCompanyVo>> clean.platform.disorder.controller.CompanyController.pageCompanys(clean.platform.disorder.model.query.QueryCompany)
+Mapped "{[/company/info/{id}],methods=[GET]}" onto public clean.platform.disorder.model.ResponseResult<clean.platform.disorder.model.entity.vo.TbCompanyVo> clean.platform.disorder.controller.CompanyController.queryCompanys(java.lang.Long)
+Mapped "{[/company/serviceItems],methods=[GET]}" onto public clean.platform.disorder.model.ResponseResult<java.util.List<clean.platform.disorder.model.entity.vo.TbServiceItemVo>> clean.platform.disorder.controller.CompanyController.queryAllServiceItems()
+Mapped "{[/company/itemConfig/{companyId}],methods=[GET]}" onto public clean.platform.disorder.model.ResponseResult<java.util.List<clean.platform.disorder.model.entity.vo.TbCompanyItemVo>> clean.platform.disorder.controller.CompanyController.queryCompanyItemConfigInfo(java.lang.Long)
+Mapped "{[/login/byAccount],methods=[POST]}" onto public clean.platform.disorder.model.ResponseResult<clean.platform.disorder.model.dto.LoginUser> clean.platform.disorder.controller.LoginController.userLogin(clean.platform.disorder.model.entity.vo.TbUserVo)
+Mapped "{[/maintenanc/list],methods=[GET]}" onto public clean.platform.disorder.model.ResponseResult<java.util.List<clean.platform.disorder.model.entity.vo.TbOriginVo>> clean.platform.disorder.controller.MaintenancController.queryAllOriginList()
+Mapped "{[/order/add]}" onto public clean.platform.disorder.model.ResponseResult<?> clean.platform.disorder.controller.OrderController.addOrder(clean.platform.disorder.model.dto.OrderVo)
+Mapped "{[/order/modify]}" onto public clean.platform.disorder.model.ResponseResult<?> clean.platform.disorder.controller.OrderController.updateOrder(clean.platform.disorder.model.dto.OrderVo)
+Mapped "{[/order/delete/{id}]}" onto public clean.platform.disorder.model.ResponseResult<?> clean.platform.disorder.controller.OrderController.deleteOrder(java.lang.Long)
+Mapped "{[/order/orderPage],methods=[POST]}" onto public clean.platform.disorder.model.ResponseResult<com.github.pagehelper.PageInfo<clean.platform.disorder.model.entity.vo.TbOrderVo>> clean.platform.disorder.controller.OrderController.queryOrderPageList(clean.platform.disorder.model.query.QueryOrder)
+Mapped "{[/order/judgeFinishOrder],methods=[POST]}" onto public clean.platform.disorder.model.ResponseResult<com.github.pagehelper.PageInfo<clean.platform.disorder.model.entity.vo.JudgeFinishedOrderVo>> clean.platform.disorder.controller.OrderController.judegeOrder(clean.platform.disorder.model.query.QueryOrder)
+Mapped "{[/order/notDisOrderPage]}" onto public clean.platform.disorder.model.ResponseResult<com.github.pagehelper.PageInfo<clean.platform.disorder.model.entity.vo.TbOrderVo>> clean.platform.disorder.controller.OrderController.queryNotDisOrderPageList(clean.platform.disorder.model.query.QueryOrder)
+Mapped "{[/order/info/{id}]}" onto public clean.platform.disorder.model.ResponseResult<clean.platform.disorder.model.entity.vo.TbOrderVo> clean.platform.disorder.controller.OrderController.queryOrderInfo(java.lang.Long)
+Mapped "{[/order/dispatch],methods=[POST]}" onto public clean.platform.disorder.model.ResponseResult<?> clean.platform.disorder.controller.OrderController.dispatchStaffOrder(clean.platform.disorder.model.entity.vo.TbOrderVo)
+Mapped "{[/order/finish],methods=[POST]}" onto public clean.platform.disorder.model.ResponseResult<?> clean.platform.disorder.controller.OrderController.finishedOrder(clean.platform.disorder.model.entity.vo.TbFinishedOrderVo)
+Mapped "{[/order/cancelOrder/{orderId}],methods=[GET]}" onto public clean.platform.disorder.model.ResponseResult<?> clean.platform.disorder.controller.OrderController.cancelOrder(java.lang.Long)
+Mapped "{[/order/againOrder/{orderId}],methods=[GET]}" onto public clean.platform.disorder.model.ResponseResult<?> clean.platform.disorder.controller.OrderController.againDisOrder(java.lang.Long)
+Mapped "{[/order/resetOrder/{orderId}],methods=[GET]}" onto public clean.platform.disorder.model.ResponseResult<?> clean.platform.disorder.controller.OrderController.resetDisOrder(java.lang.Long)
+Mapped "{[/order/checkOrder/{orderId}],methods=[GET]}" onto public clean.platform.disorder.model.ResponseResult<?> clean.platform.disorder.controller.OrderController.checkOrder(java.lang.Long)
+Mapped "{[/order/selectOrderNumber],methods=[GET]}" onto public java.util.List<java.util.Map<java.lang.String, java.lang.String>> clean.platform.disorder.controller.OrderController.callBackOrder()
+Mapped "{[/order/callBackOrder/{orderId}],methods=[GET]}" onto public clean.platform.disorder.model.ResponseResult<?> clean.platform.disorder.controller.OrderController.callBackOrder(java.lang.Long)
+Mapped "{[/order/selectOrderFinishNumber],methods=[GET]}" onto public java.util.List<java.util.Map<java.lang.String, java.lang.Integer>> clean.platform.disorder.controller.OrderController.selectOrderFinishNumber()
+Mapped "{[/order/selectFirstOrderFinishNumber],methods=[GET]}" onto public java.util.List<java.util.Map<java.lang.String, java.lang.Integer>> clean.platform.disorder.controller.OrderController.selectFirstOrderFinishNumber()
+Mapped "{[/order/selectSevenOrderNumber],methods=[GET]}" onto public java.util.List<java.util.Map<java.lang.String, java.lang.Integer>> clean.platform.disorder.controller.OrderController.selectSevenOrderNumber()
+Mapped "{[/order/selectSevenOrderNumber2],methods=[GET]}" onto public java.util.List<java.util.Map<java.lang.String, java.lang.String>> clean.platform.disorder.controller.OrderController.selectSevenOrderNumber2()
+Mapped "{[/order/selectOrinigOrderNumber],methods=[GET]}" onto public java.util.List<java.util.Map<java.lang.String, java.lang.String>> clean.platform.disorder.controller.OrderController.selectOrinigOrderNumber()
+Mapped "{[/role/list],methods=[POST]}" onto public clean.platform.disorder.model.ResponseResult<java.util.List<clean.platform.disorder.model.entity.vo.TbRoleVo>> clean.platform.disorder.controller.RoleController.queryRoleList()
+Mapped "{[/role/rolePage],methods=[POST]}" onto public clean.platform.disorder.model.ResponseResult<com.github.pagehelper.PageInfo<clean.platform.disorder.model.entity.vo.TbRoleVo>> clean.platform.disorder.controller.RoleController.queryRolePage(clean.platform.disorder.model.query.QueryRole)
+Mapped "{[/role/funMenuList],methods=[POST]}" onto public clean.platform.disorder.model.ResponseResult<java.util.List<clean.platform.disorder.model.entity.vo.TbFunMenuVo>> clean.platform.disorder.controller.RoleController.queryAllFunMenu()
+Mapped "{[/role/add],methods=[POST]}" onto public clean.platform.disorder.model.ResponseResult<?> clean.platform.disorder.controller.RoleController.adRole(clean.platform.disorder.model.entity.vo.TbRoleVo)
+Mapped "{[/role/info/{roleId}],methods=[GET]}" onto public clean.platform.disorder.model.ResponseResult<clean.platform.disorder.model.entity.vo.TbRoleVo> clean.platform.disorder.controller.RoleController.queryRoleInfo(java.lang.Long)
+Mapped "{[/role/delete/{roleId}],methods=[GET]}" onto public clean.platform.disorder.model.ResponseResult<?> clean.platform.disorder.controller.RoleController.deletRole(java.lang.Long)
+Mapped "{[/role/modify],methods=[POST]}" onto public clean.platform.disorder.model.ResponseResult<?> clean.platform.disorder.controller.RoleController.updateRole(clean.platform.disorder.model.entity.vo.TbRoleVo)
+Mapped "{[/role/funMenu/{roleId}],methods=[GET]}" onto public clean.platform.disorder.model.ResponseResult<java.util.List<clean.platform.disorder.model.entity.vo.TbFunMenuVo>> clean.platform.disorder.controller.RoleController.queryRoleFunMenuList(java.lang.Long)
+Mapped "{[/role/menuAction/{roleId}],methods=[GET]}" onto public clean.platform.disorder.model.ResponseResult<java.util.List<clean.platform.disorder.model.dto.MenuActionInfo>> clean.platform.disorder.controller.RoleController.initMenuList(java.lang.Long)
+Mapped "{[/staff/page],methods=[POST]}" onto public clean.platform.disorder.model.ResponseResult<com.github.pagehelper.PageInfo<clean.platform.disorder.model.entity.vo.TbStaffVo>> clean.platform.disorder.controller.StaffController.queryOrderPageList(clean.platform.disorder.model.query.QueryStaff)
+Mapped "{[/staff/add],methods=[POST]}" onto public clean.platform.disorder.model.ResponseResult<?> clean.platform.disorder.controller.StaffController.addStaff(clean.platform.disorder.model.entity.vo.TbStaffVo)
+Mapped "{[/staff/modify],methods=[POST]}" onto public clean.platform.disorder.model.ResponseResult<?> clean.platform.disorder.controller.StaffController.updateStaff(clean.platform.disorder.model.entity.vo.TbStaffVo)
+Mapped "{[/staff/delete/{id}]}" onto public clean.platform.disorder.model.ResponseResult<?> clean.platform.disorder.controller.StaffController.deleteStaff(java.lang.Long)
+Mapped "{[/staff/info/{id}]}" onto public clean.platform.disorder.model.ResponseResult<clean.platform.disorder.model.entity.vo.TbStaffVo> clean.platform.disorder.controller.StaffController.queryStaffInfo(java.lang.Long)
+Mapped "{[/staff/list],methods=[POST]}" onto public clean.platform.disorder.model.ResponseResult<java.util.List<clean.platform.disorder.model.entity.vo.TbStaffVo>> clean.platform.disorder.controller.StaffController.selectAllStaffList(clean.platform.disorder.model.query.QueryStaff)
+Mapped "{[/user/add],methods=[POST]}" onto public clean.platform.disorder.model.ResponseResult<?> clean.platform.disorder.controller.UserController.addUser(clean.platform.disorder.model.entity.vo.TbUserVo)
+Mapped "{[/user/modify],methods=[POST]}" onto public clean.platform.disorder.model.ResponseResult<?> clean.platform.disorder.controller.UserController.updateUser(clean.platform.disorder.model.entity.vo.TbUserVo)
+Mapped "{[/user/delete/{id}],methods=[GET]}" onto public clean.platform.disorder.model.ResponseResult<?> clean.platform.disorder.controller.UserController.deleteUser(java.lang.Long)
+Mapped "{[/user/info/{id}],methods=[GET]}" onto public clean.platform.disorder.model.ResponseResult<clean.platform.disorder.model.entity.vo.TbUserVo> clean.platform.disorder.controller.UserController.queryUserInfo(java.lang.Long)
+Mapped "{[/user/page],methods=[POST]}" onto public clean.platform.disorder.model.ResponseResult<com.github.pagehelper.PageInfo<clean.platform.disorder.model.entity.vo.TbUserVo>> clean.platform.disorder.controller.UserController.queryUserPage(clean.platform.disorder.model.query.QueryUser)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6950ed69: startup date [Sat Mar 14 15:03:16 CST 2020]; root of context hierarchy
+Registering beans for JMX exposure on startup
+Bean with name 'masterDataSource' has been autodetected for JMX exposure
+Located MBean 'masterDataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=masterDataSource,type=DruidDataSource]
+Tomcat started on port(s): 9800 (http) with context path '/order'
+Started DisOrderApplication in 3.997 seconds (JVM running for 5.793)
+FrameworkServlet 'dispatcherServlet': initialization started
+FrameworkServlet 'dispatcherServlet': initialization completed in 15 ms
+==>  Preparing: select a.id as userId, a.user_name, a.user_account, c.id as roleId, c.role_name from tb_user a left join tb_user_role b on a.id = b.user_id left join tb_role c on b.role_id = c.id WHERE a.is_active = 1 and a.user_account = ? and a.password = ? 
+==> Parameters: admin(String), 123456(String)
+<==      Total: 1
+==>  Preparing: select a.id, a.menu_code, a.menu_name, a.path, a.parent_id from tb_fun_menu a left join tb_role_menu b on a.id = b.menu_id left join tb_role c on c.id = b.role_id where c.id = ? 
+==> Parameters: 1(Long)
+<==      Total: 5
+==>  Preparing: SELECT id, menu_code, menu_name, path, parent_id FROM tb_fun_menu WHERE parent_Id = ? 
+==> Parameters: 2(Integer)
+<==      Total: 2
+==>  Preparing: SELECT id, menu_code, menu_name, path, parent_id FROM tb_fun_menu WHERE parent_Id = ? 
+==> Parameters: 3(Integer)
+<==      Total: 1
+==>  Preparing: SELECT id, menu_code, menu_name, path, parent_id FROM tb_fun_menu WHERE parent_Id = ? 
+==> Parameters: 4(Integer)
+<==      Total: 3
+==>  Preparing: SELECT id, menu_code, menu_name, path, parent_id FROM tb_fun_menu WHERE parent_Id = ? 
+==> Parameters: 1(Integer)
+<==      Total: 1
+==>  Preparing: SELECT id, menu_code, menu_name, path, parent_id FROM tb_fun_menu WHERE parent_Id = ? 
+==> Parameters: 16(Integer)
+<==      Total: 1
+==>  Preparing: SELECT COUNT(*) as num, a.status as status from tb_finished_order a GROUP BY a.status UNION SELECT COUNT(*) as num ,b.status as status from tb_order b GROUP BY b.status 
+==> Parameters: 
+==>  Preparing: SELECT DATE_FORMAT(create_date,'%m.%d') as mth FROM tb_finished_order WHERE DATE_SUB( CURDATE( ), INTERVAL 6 DAY ) <= date( create_date ) AND STATUS = '3' GROUP BY DATE_FORMAT( create_date, '%d.%m' ) ORDER BY DATE_FORMAT( create_date, '%m' ), DATE_FORMAT( create_date, '%d' ) 
+==>  Preparing: SELECT MONTH(a.book_start_date) as mth,sum(a.amount) as money from tb_order a where a.status='8' GROUP BY MONTH(a.book_start_date) ORDER BY MONTH(a.book_start_date) 
+==> Parameters: 
+==> Parameters: 
+==>  Preparing: SELECT SUM( income_amount ) as money FROM tb_finished_order WHERE DATE_SUB( CURDATE( ), INTERVAL 6 DAY ) <= date( create_date ) AND STATUS = '3' GROUP BY DATE_FORMAT( create_date, '%d.%m' ) ORDER BY DATE_FORMAT( create_date, '%m' ), DATE_FORMAT( create_date, '%d' ) 
+==> Parameters: 
+==>  Preparing: SELECT count( * ) AS num, a.origin AS origin FROM tb_order a LEFT JOIN tb_finished_order b ON a.id = b.order_id WHERE b.STATUS = '3' AND a.origin IS NOT NULL GROUP BY a.origin ORDER BY a.origin 
+==> Parameters: 
+<==      Total: 6
+==>  Preparing: SELECT MONTH(b.create_date) as mth ,sum(b.income_amount) as money from tb_finished_order b where b.status='3' GROUP BY MONTH(b.create_date) ORDER BY MONTH(b.create_date) 
+==> Parameters: 
+<==      Total: 3
+<==      Total: 4
+<==      Total: 4
+<==      Total: 6
+<==      Total: 6
+==>  Preparing: SELECT id, item_code, item_name, status FROM tb_service_item 
+==> Parameters: 
+<==      Total: 8
+==>  Preparing: SELECT count(*) FROM tb_order a LEFT JOIN tb_origin b ON a.origin = b.id WHERE status IN (1, 4, 5, 6) 
+==> Parameters: 
+<==      Total: 1
+==>  Preparing: SELECT a.id, a.customer_name, a.mobile_no, a.customer_address, a.detail_info, a.status, b.origin_from, a.order_no, a.book_start_date FROM tb_order a left join tb_origin b on a.origin = b.id WHERE status in (1,4,5,6) limit ?,? 
+==> Parameters: 0(Integer), 10(Integer)
+<==      Total: 2
+==>  Preparing: SELECT id, origin_from FROM tb_origin where is_delete = 0 
+==>  Preparing: SELECT id, item_code, item_name, status FROM tb_service_item 
+==> Parameters: 
+==> Parameters: 
+<==      Total: 8
+<==      Total: 8
+==>  Preparing: SELECT count(*) FROM tb_user WHERE is_active = 1 
+==> Parameters: 
+<==      Total: 1
+==>  Preparing: SELECT id, user_name, user_account, password, is_active FROM tb_user WHERE is_active = 1 limit ?,? 
+==> Parameters: 0(Integer), 10(Integer)
+<==      Total: 4
+==>  Preparing: SELECT count(*) FROM tb_staff WHERE is_delete = 0 
+==> Parameters: 
+<==      Total: 1
+==>  Preparing: SELECT id, staff_name, is_active, is_delete, department_name, title, create_time FROM tb_staff WHERE is_delete = 0 limit ?,? 
+==> Parameters: 0(Integer), 10(Integer)
+<==      Total: 4
+==>  Preparing: SELECT id, item_code, item_name, status FROM tb_service_item 
+==> Parameters: 
+<==      Total: 8
+==>  Preparing: SELECT count(*) FROM tb_company WHERE is_delete = 0 
+==> Parameters: 
+<==      Total: 1
+==>  Preparing: SELECT id, company_code, company_name, cuscc, status, contact, contact_tel, address, level, is_delete, create_time, create_user, update_time, update_user FROM tb_company WHERE is_delete = 0 limit ?,? 
+==> Parameters: 0(Integer), 10(Integer)
+<==      Total: 3
+==>  Preparing: SELECT count(*) FROM tb_finished_order a LEFT JOIN tb_order b ON a.order_id = b.id LEFT JOIN tb_staff_order c ON c.staff_id = a.order_id WHERE b.customer_address IS NOT NULL AND b.order_no IS NOT NULL AND a.status IN (1, 2) 
+==> Parameters: 
+<==      Total: 1
+==>  Preparing: SELECT count(*) FROM tb_staff WHERE is_delete = 0 
+==> Parameters: 
+<==      Total: 1
+==>  Preparing: SELECT id, staff_name, is_active, is_delete, department_name, title, create_time FROM tb_staff WHERE is_delete = 0 limit ?,? 
+==> Parameters: 0(Integer), 10(Integer)
+<==      Total: 4
+==>  Preparing: SELECT count(*) FROM tb_user WHERE is_active = 1 
+==> Parameters: 
+<==      Total: 1
+==>  Preparing: SELECT id, user_name, user_account, password, is_active FROM tb_user WHERE is_active = 1 limit ?,? 
+==> Parameters: 0(Integer), 10(Integer)
+<==      Total: 4
+==>  Preparing: SELECT count(*) FROM tb_order a LEFT JOIN tb_origin b ON a.origin = b.id WHERE status IN (2, 3, 4, 5, 6, 7) 
+==> Parameters: 
+<==      Total: 1
+==>  Preparing: SELECT a.id, a.customer_name, a.mobile_no, a.customer_address, a.detail_info, a.status, a.payment, b.origin_from, a.order_no, a.amount, a.create_date FROM tb_order a left join tb_origin b on a.origin = b.id WHERE status in (2,3,4,5,6,7) limit ?,? 
+==> Parameters: 0(Integer), 10(Integer)
+<==      Total: 1
+==>  Preparing: SELECT a.id, a.customer_name, a.mobile_no, a.customer_address, a.detail_info, a.status, a.payment, b.origin_from, a.order_no, a.amount, a.create_date FROM tb_order a left join tb_origin b on a.origin = b.id WHERE status in (2,3,4,5,6,7) 
+==> Parameters: 
+<==      Total: 1
+==>  Preparing: select b.id, b.staff_name from tb_staff_order a left join tb_staff b on a.staff_id = b.id where a.order_id = ? and b.is_active = 1 and b.is_delete = 0 
+==> Parameters: 679331065004953600(Long)
+<==      Total: 0
+==>  Preparing: SELECT id, item_code, item_name, status FROM tb_service_item 
+==> Parameters: 
+<==      Total: 8
+==>  Preparing: SELECT count(*) FROM tb_order a LEFT JOIN tb_origin b ON a.origin = b.id WHERE status IN (1, 4, 5, 6) 
+==> Parameters: 
+<==      Total: 1
+==>  Preparing: SELECT a.id, a.customer_name, a.mobile_no, a.customer_address, a.detail_info, a.status, b.origin_from, a.order_no, a.book_start_date FROM tb_order a left join tb_origin b on a.origin = b.id WHERE status in (1,4,5,6) limit ?,? 
+==> Parameters: 0(Integer), 10(Integer)
+<==      Total: 2
+==>  Preparing: SELECT count(*) FROM tb_order a LEFT JOIN tb_origin b ON a.origin = b.id WHERE status IN (2, 3, 4, 5, 6, 7) 
+==> Parameters: 
+<==      Total: 1
+==>  Preparing: SELECT a.id, a.customer_name, a.mobile_no, a.customer_address, a.detail_info, a.status, a.payment, b.origin_from, a.order_no, a.amount, a.create_date FROM tb_order a left join tb_origin b on a.origin = b.id WHERE status in (2,3,4,5,6,7) limit ?,? 
+==> Parameters: 0(Integer), 10(Integer)
+<==      Total: 1
+==>  Preparing: SELECT a.id, a.customer_name, a.mobile_no, a.customer_address, a.detail_info, a.status, a.payment, b.origin_from, a.order_no, a.amount, a.create_date FROM tb_order a left join tb_origin b on a.origin = b.id WHERE status in (2,3,4,5,6,7) 
+==> Parameters: 
+<==      Total: 1
+==>  Preparing: select b.id, b.staff_name from tb_staff_order a left join tb_staff b on a.staff_id = b.id where a.order_id = ? and b.is_active = 1 and b.is_delete = 0 
+==> Parameters: 679331065004953600(Long)
+<==      Total: 0
+==>  Preparing: SELECT count(*) FROM tb_staff WHERE is_delete = 0 
+==> Parameters: 
+<==      Total: 1
+==>  Preparing: SELECT id, staff_name, is_active, is_delete, department_name, title, create_time FROM tb_staff WHERE is_delete = 0 limit ?,? 
+==> Parameters: 0(Integer), 10(Integer)
+<==      Total: 4
+==>  Preparing: SELECT count(*) FROM tb_user WHERE is_active = 1 
+==> Parameters: 
+<==      Total: 1
+==>  Preparing: SELECT id, user_name, user_account, password, is_active FROM tb_user WHERE is_active = 1 limit ?,? 
+==> Parameters: 0(Integer), 10(Integer)
+<==      Total: 4
+==>  Preparing: SELECT id, menu_code, menu_name, path, parent_id FROM tb_fun_menu 
+==> Parameters: 
+==>  Preparing: SELECT count(*) FROM tb_role 
+==> Parameters: 
+<==      Total: 22
+<==      Total: 1
+==>  Preparing: SELECT id, role_name, role_desc, is_active, is_delete FROM tb_role limit ?,? 
+==> Parameters: 0(Integer), 10(Integer)
+<==      Total: 4
+==>  Preparing: select a.id, a.menu_code, a.menu_name, a.path, a.parent_id from tb_fun_menu a left join tb_role_menu b on a.id = b.menu_id left join tb_role c on c.id = b.role_id where c.id = ? 
+==> Parameters: 1(Long)
+<==      Total: 5
+==>  Preparing: select a.id, a.menu_code, a.menu_name, a.path, a.parent_id from tb_fun_menu a left join tb_role_menu b on a.id = b.menu_id left join tb_role c on c.id = b.role_id where c.id = ? 
+==> Parameters: 8(Long)
+<==      Total: 1
+==>  Preparing: select a.id, a.menu_code, a.menu_name, a.path, a.parent_id from tb_fun_menu a left join tb_role_menu b on a.id = b.menu_id left join tb_role c on c.id = b.role_id where c.id = ? 
+==> Parameters: 9(Long)
+<==      Total: 2
+==>  Preparing: select a.id, a.menu_code, a.menu_name, a.path, a.parent_id from tb_fun_menu a left join tb_role_menu b on a.id = b.menu_id left join tb_role c on c.id = b.role_id where c.id = ? 
+==> Parameters: 10(Long)
+<==      Total: 3
+==>  Preparing: SELECT id, role_name, role_desc, is_active, is_delete FROM tb_role WHERE id = ? 
+==> Parameters: 1(Long)
+<==      Total: 1
+==>  Preparing: select a.id, a.menu_code, a.menu_name, a.path, a.parent_id from tb_fun_menu a left join tb_role_menu b on a.id = b.menu_id left join tb_role c on c.id = b.role_id where c.id = ? 
+==> Parameters: 1(Long)
+<==      Total: 5
+==>  Preparing: SELECT id, role_name, role_desc, is_active, is_delete FROM tb_role WHERE is_delete = 0 and role_name = ? 
+==> Parameters: 系统管理员(String)
+<==      Total: 1
+==>  Preparing: delete from tb_role_menu where role_id = ? 
+==> Parameters: 1(Long)
+<==    Updates: 5
+==>  Preparing: UPDATE tb_role SET role_name = ?, role_desc = ?, is_active = ?, is_delete = ? WHERE id = ? 
+==> Parameters: 系统管理员(String), 系统开发人员(String), 1(Short), 0(Short), 1(Long)
+<==    Updates: 1
+==>  Preparing: INSERT INTO tb_role_menu ( role_id, menu_id ) VALUES ( ?, ? ) 
+==> Parameters: 1(Integer), 2(Integer)
+<==    Updates: 1
+==>  Preparing: INSERT INTO tb_role_menu ( role_id, menu_id ) VALUES ( ?, ? ) 
+==> Parameters: 1(Integer), 3(Integer)
+<==    Updates: 1
+==>  Preparing: INSERT INTO tb_role_menu ( role_id, menu_id ) VALUES ( ?, ? ) 
+==> Parameters: 1(Integer), 4(Integer)
+<==    Updates: 1
+==>  Preparing: INSERT INTO tb_role_menu ( role_id, menu_id ) VALUES ( ?, ? ) 
+==> Parameters: 1(Integer), 1(Integer)
+<==    Updates: 1
+==>  Preparing: INSERT INTO tb_role_menu ( role_id, menu_id ) VALUES ( ?, ? ) 
+==> Parameters: 1(Integer), 16(Integer)
+<==    Updates: 1
+==>  Preparing: INSERT INTO tb_role_menu ( role_id, menu_id ) VALUES ( ?, ? ) 
+==> Parameters: 1(Integer), 14(Integer)
+<==    Updates: 1
+==>  Preparing: INSERT INTO tb_role_menu ( role_id, menu_id ) VALUES ( ?, ? ) 
+==> Parameters: 1(Integer), 13(Integer)
+<==    Updates: 1
+==>  Preparing: INSERT INTO tb_role_menu ( role_id, menu_id ) VALUES ( ?, ? ) 
+==> Parameters: 1(Integer), 18(Integer)
+<==    Updates: 1
+==>  Preparing: INSERT INTO tb_role_menu ( role_id, menu_id ) VALUES ( ?, ? ) 
+==> Parameters: 1(Integer), 20(Integer)
+<==    Updates: 1
+==>  Preparing: SELECT count(*) FROM tb_role 
+==> Parameters: 
+<==      Total: 1
+==>  Preparing: SELECT id, role_name, role_desc, is_active, is_delete FROM tb_role limit ?,? 
+==> Parameters: 0(Integer), 10(Integer)
+<==      Total: 4
+==>  Preparing: select a.id, a.menu_code, a.menu_name, a.path, a.parent_id from tb_fun_menu a left join tb_role_menu b on a.id = b.menu_id left join tb_role c on c.id = b.role_id where c.id = ? 
+==> Parameters: 1(Long)
+<==      Total: 9
+==>  Preparing: select a.id, a.menu_code, a.menu_name, a.path, a.parent_id from tb_fun_menu a left join tb_role_menu b on a.id = b.menu_id left join tb_role c on c.id = b.role_id where c.id = ? 
+==> Parameters: 8(Long)
+<==      Total: 1
+==>  Preparing: select a.id, a.menu_code, a.menu_name, a.path, a.parent_id from tb_fun_menu a left join tb_role_menu b on a.id = b.menu_id left join tb_role c on c.id = b.role_id where c.id = ? 
+==> Parameters: 9(Long)
+<==      Total: 2
+==>  Preparing: select a.id, a.menu_code, a.menu_name, a.path, a.parent_id from tb_fun_menu a left join tb_role_menu b on a.id = b.menu_id left join tb_role c on c.id = b.role_id where c.id = ? 
+==> Parameters: 10(Long)
+<==      Total: 3
+==>  Preparing: select a.id, a.menu_code, a.menu_name, a.path, a.parent_id from tb_fun_menu a left join tb_role_menu b on a.id = b.menu_id left join tb_role c on c.id = b.role_id where c.id = ? 
+==> Parameters: 1(Long)
+<==      Total: 9
+==>  Preparing: SELECT id, menu_code, menu_name, path, parent_id FROM tb_fun_menu WHERE parent_Id = ? 
+==> Parameters: 2(Integer)
+<==      Total: 2
+==>  Preparing: SELECT id, menu_code, menu_name, path, parent_id FROM tb_fun_menu WHERE parent_Id = ? 
+==> Parameters: 3(Integer)
+<==      Total: 1
+==>  Preparing: SELECT id, menu_code, menu_name, path, parent_id FROM tb_fun_menu WHERE parent_Id = ? 
+==> Parameters: 4(Integer)
+<==      Total: 3
+==>  Preparing: SELECT id, menu_code, menu_name, path, parent_id FROM tb_fun_menu WHERE parent_Id = ? 
+==> Parameters: 1(Integer)
+<==      Total: 1
+==>  Preparing: SELECT id, menu_code, menu_name, path, parent_id FROM tb_fun_menu WHERE parent_Id = ? 
+==> Parameters: 16(Integer)
+<==      Total: 1
+==>  Preparing: SELECT id, menu_code, menu_name, path, parent_id FROM tb_fun_menu WHERE parent_Id = ? 
+==> Parameters: 14(Integer)
+<==      Total: 1
+==>  Preparing: SELECT id, menu_code, menu_name, path, parent_id FROM tb_fun_menu WHERE parent_Id = ? 
+==> Parameters: 13(Integer)
+<==      Total: 2
+==>  Preparing: SELECT id, menu_code, menu_name, path, parent_id FROM tb_fun_menu WHERE parent_Id = ? 
+==> Parameters: 18(Integer)
+<==      Total: 1
+==>  Preparing: SELECT id, menu_code, menu_name, path, parent_id FROM tb_fun_menu WHERE parent_Id = ? 
+==> Parameters: 20(Integer)
+<==      Total: 1
+==>  Preparing: SELECT count(*) FROM tb_role 
+==> Parameters: 
+==>  Preparing: SELECT id, menu_code, menu_name, path, parent_id FROM tb_fun_menu 
+==> Parameters: 
+<==      Total: 22
+<==      Total: 1
+==>  Preparing: SELECT id, role_name, role_desc, is_active, is_delete FROM tb_role limit ?,? 
+==> Parameters: 0(Integer), 10(Integer)
+<==      Total: 4
+==>  Preparing: select a.id, a.menu_code, a.menu_name, a.path, a.parent_id from tb_fun_menu a left join tb_role_menu b on a.id = b.menu_id left join tb_role c on c.id = b.role_id where c.id = ? 
+==> Parameters: 1(Long)
+<==      Total: 9
+==>  Preparing: select a.id, a.menu_code, a.menu_name, a.path, a.parent_id from tb_fun_menu a left join tb_role_menu b on a.id = b.menu_id left join tb_role c on c.id = b.role_id where c.id = ? 
+==> Parameters: 8(Long)
+<==      Total: 1
+==>  Preparing: select a.id, a.menu_code, a.menu_name, a.path, a.parent_id from tb_fun_menu a left join tb_role_menu b on a.id = b.menu_id left join tb_role c on c.id = b.role_id where c.id = ? 
+==> Parameters: 9(Long)
+<==      Total: 2
+==>  Preparing: select a.id, a.menu_code, a.menu_name, a.path, a.parent_id from tb_fun_menu a left join tb_role_menu b on a.id = b.menu_id left join tb_role c on c.id = b.role_id where c.id = ? 
+==> Parameters: 10(Long)
+<==      Total: 3
+==>  Preparing: SELECT COUNT(*) as num, a.status as status from tb_finished_order a GROUP BY a.status UNION SELECT COUNT(*) as num ,b.status as status from tb_order b GROUP BY b.status 
+==>  Preparing: SELECT MONTH(b.create_date) as mth ,sum(b.income_amount) as money from tb_finished_order b where b.status='3' GROUP BY MONTH(b.create_date) ORDER BY MONTH(b.create_date) 
+==> Parameters: 
+==> Parameters: 
+<==      Total: 6
+<==      Total: 6
+==>  Preparing: SELECT count( * ) AS num, a.origin AS origin FROM tb_order a LEFT JOIN tb_finished_order b ON a.id = b.order_id WHERE b.STATUS = '3' AND a.origin IS NOT NULL GROUP BY a.origin ORDER BY a.origin 
+==> Parameters: 
+==>  Preparing: SELECT DATE_FORMAT(create_date,'%m.%d') as mth FROM tb_finished_order WHERE DATE_SUB( CURDATE( ), INTERVAL 6 DAY ) <= date( create_date ) AND STATUS = '3' GROUP BY DATE_FORMAT( create_date, '%d.%m' ) ORDER BY DATE_FORMAT( create_date, '%m' ), DATE_FORMAT( create_date, '%d' ) 
+==>  Preparing: SELECT MONTH(a.book_start_date) as mth,sum(a.amount) as money from tb_order a where a.status='8' GROUP BY MONTH(a.book_start_date) ORDER BY MONTH(a.book_start_date) 
+==> Parameters: 
+==>  Preparing: SELECT SUM( income_amount ) as money FROM tb_finished_order WHERE DATE_SUB( CURDATE( ), INTERVAL 6 DAY ) <= date( create_date ) AND STATUS = '3' GROUP BY DATE_FORMAT( create_date, '%d.%m' ) ORDER BY DATE_FORMAT( create_date, '%m' ), DATE_FORMAT( create_date, '%d' ) 
+==> Parameters: 
+==> Parameters: 
+<==      Total: 3
+<==      Total: 6
+<==      Total: 4
+<==      Total: 4
+==>  Preparing: SELECT id, item_code, item_name, status FROM tb_service_item 
+==> Parameters: 
+<==      Total: 8
+==>  Preparing: SELECT count(*) FROM tb_order a LEFT JOIN tb_origin b ON a.origin = b.id WHERE status IN (1, 4, 5, 6) 
+==> Parameters: 
+<==      Total: 1
+==>  Preparing: SELECT a.id, a.customer_name, a.mobile_no, a.customer_address, a.detail_info, a.status, b.origin_from, a.order_no, a.book_start_date FROM tb_order a left join tb_origin b on a.origin = b.id WHERE status in (1,4,5,6) limit ?,? 
+==> Parameters: 0(Integer), 10(Integer)
+<==      Total: 2
+==>  Preparing: SELECT id, item_code, item_name, status FROM tb_service_item 
+==>  Preparing: SELECT id, origin_from FROM tb_origin where is_delete = 0 
+==> Parameters: 
+==> Parameters: 
+<==      Total: 8
+<==      Total: 8

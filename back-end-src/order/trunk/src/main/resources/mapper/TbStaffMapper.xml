@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="clean.platform.disorder.mapper.TbStaffMapper">
+
+	<resultMap id="BaseResultMap" type="clean.platform.disorder.model.entity.TbStaff">
+		<id column="id" property="id" jdbcType="BIGINT" />
+		<result column="staff_name" property="staffName" jdbcType="VARCHAR" />
+		<result column="is_active" property="isActive" jdbcType="SMALLINT" />
+		<result column="is_delete" property="isDelete" jdbcType="SMALLINT" />
+		<result column="department_name" property="departmentName" jdbcType="VARCHAR" />
+		<result column="title" property="title" jdbcType="VARCHAR" />
+		<result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
+	</resultMap>
+
+	<sql id="Base_Column_List">
+		id, staff_name, is_active, is_delete, department_name, title
+	</sql>
+
+	<!-- 根据pk查询 -->
+	<select id="selectByPrimaryKey" resultMap="BaseResultMap"
+		parameterType="java.lang.Long">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM tb_staff
+		WHERE id = #{id, jdbcType=BIGINT}
+	</select>
+
+	<!-- 根据pk删除 -->
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+		DELETE FROM tb_staff
+		WHERE id = #{id, jdbcType=BIGINT}
+	</delete>
+
+	<!-- 新增 -->
+	<insert id="insert" parameterType="clean.platform.disorder.model.entity.TbStaff">
+		<selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+		INSERT INTO tb_staff
+		(staff_name, is_active, is_delete, department_name, title, create_time)
+		VALUES (#{staffName, jdbcType=VARCHAR}, #{isActive, jdbcType=SMALLINT}, 
+		#{isDelete, jdbcType=SMALLINT}, #{departmentName, jdbcType=VARCHAR}, 
+		#{title, jdbcType=VARCHAR}),#{createTime, jdbcType=TIMESTAMP}
+	</insert>
+
+	<!-- 新增 -->
+	<insert id="insertSelective" parameterType="clean.platform.disorder.model.entity.TbStaff">
+		<selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+		INSERT INTO tb_staff
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="staffName != null">
+				staff_name,
+			</if>
+			<if test="isActive != null">
+				is_active,
+			</if>
+			<if test="isDelete != null">
+				is_delete,
+			</if>
+			<if test="departmentName != null">
+				department_name,
+			</if>
+			<if test="title != null">
+				title,
+			</if>
+			<if test="createTime != null">
+				create_time,
+			</if>
+		</trim>
+		<trim prefix="VALUES (" suffix=")" suffixOverrides=",">
+			<if test="staffName != null">
+				#{staffName,jdbcType=VARCHAR},
+			</if>
+			<if test="isActive != null">
+				#{isActive,jdbcType=SMALLINT},
+			</if>
+			<if test="isDelete != null">
+				#{isDelete,jdbcType=SMALLINT},
+			</if>
+			<if test="departmentName != null">
+				#{departmentName,jdbcType=VARCHAR},
+			</if>
+			<if test="title != null">
+				#{title,jdbcType=VARCHAR},
+			</if>
+			<if test="createTime != null">
+				#{createTime, jdbcType=TIMESTAMP},
+			</if>
+		</trim>
+	</insert>
+
+	<!-- 批量新增 -->
+	<insert id="insertBatch" parameterType="java.util.List" useGeneratedKeys="true" keyProperty="id">
+		INSERT INTO tb_staff
+		(staff_name, is_active, is_delete, department_name, title, create_time)
+		VALUES
+		<foreach collection="list" item="item" index="index" separator=",">  
+		(#{item.staffName, jdbcType=VARCHAR}, #{item.isActive, jdbcType=SMALLINT}, 
+		#{item.isDelete, jdbcType=SMALLINT}, #{item.departmentName, jdbcType=VARCHAR}, 
+		#{item.title, jdbcType=VARCHAR},#{createTime, jdbcType=TIMESTAMP})
+		</foreach>
+	</insert>
+
+	<!-- 根据pk更新 -->
+	<update id="updateByPrimaryKeySelective" parameterType="clean.platform.disorder.model.entity.TbStaff">
+		UPDATE tb_staff
+		<set>
+			<if test="staffName != null">
+				staff_name = #{staffName, jdbcType=VARCHAR},
+			</if>
+			<if test="isActive != null">
+				is_active = #{isActive, jdbcType=SMALLINT},
+			</if>
+			<if test="isDelete != null">
+				is_delete = #{isDelete, jdbcType=SMALLINT},
+			</if>
+			<if test="departmentName != null">
+				department_name = #{departmentName, jdbcType=VARCHAR},
+			</if>
+			<if test="title != null">
+				title = #{title, jdbcType=VARCHAR},
+			</if>
+			<if test="createTime != null">
+				create_time = #{createTime, jdbcType=TIMESTAMP},
+			</if>
+		</set>
+		WHERE id = #{id, jdbcType=BIGINT}
+	</update>
+
+	<!-- 根据pk更新 -->
+	<update id="updateByPrimaryKey" parameterType="clean.platform.disorder.model.entity.TbStaff">
+		UPDATE tb_staff
+		set 
+		staff_name = #{staffName, jdbcType=VARCHAR},
+		is_active = #{isActive, jdbcType=SMALLINT},
+		is_delete = #{isDelete, jdbcType=SMALLINT},
+		department_name = #{departmentName, jdbcType=VARCHAR},
+		title = #{title, jdbcType=VARCHAR},
+		create_time = #{createTime, jdbcType=TIMESTAMP}
+		WHERE id = #{id, jdbcType=BIGINT}
+	</update>
+
+</mapper>

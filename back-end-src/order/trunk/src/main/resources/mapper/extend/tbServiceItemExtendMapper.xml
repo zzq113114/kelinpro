@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="clean.platform.disorder.mapper.extend.TbServiceItemExtendMapper">
+
+	<sql id="Base_Column_List">
+		id, item_code, item_name, status
+	</sql>
+
+	<!-- 根据id查询 -->
+	<select id="selectByPK" resultType="clean.platform.disorder.model.entity.vo.TbServiceItemVo">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM tb_service_item
+		WHERE id = #{id, jdbcType=BIGINT}
+	</select>
+
+	<!-- 根据vo查询 -->
+	<select id="selectByVo" resultType="clean.platform.disorder.model.entity.vo.TbServiceItemVo"
+		parameterType="clean.platform.disorder.model.entity.vo.TbServiceItemVo">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM tb_service_item
+		<where>
+			<if test="id != null">
+				AND id = #{id, jdbcType=BIGINT}
+			</if>
+			<if test="itemCode != null">
+				AND item_code = #{itemCode, jdbcType=VARCHAR}
+			</if>
+			<if test="itemName != null">
+				AND item_name = #{itemName, jdbcType=VARCHAR}
+			</if>
+			<if test="status != null">
+				AND status = #{status, jdbcType=SMALLINT}
+			</if>
+		</where>
+	</select>
+
+	<select id="selectAllServiceItems" resultType="clean.platform.disorder.model.entity.vo.TbServiceItemVo">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM tb_service_item
+	</select>
+
+</mapper>

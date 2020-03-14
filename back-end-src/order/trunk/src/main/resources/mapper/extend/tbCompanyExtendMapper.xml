@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="clean.platform.disorder.mapper.extend.TbCompanyExtendMapper">
+
+	<sql id="Base_Column_List">
+		id, company_code, company_name, cuscc, status, contact, contact_tel, address, level, is_delete, create_time, create_user, update_time, update_user
+	</sql>
+
+	<!-- 根据id查询 -->
+	<select id="selectByPK" resultType="clean.platform.disorder.model.entity.vo.TbCompanyVo">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM tb_company
+		WHERE id = #{id, jdbcType=BIGINT}
+	</select>
+
+	<!-- 根据vo查询 -->
+	<select id="selectByVo" resultType="clean.platform.disorder.model.entity.vo.TbCompanyVo"
+		parameterType="clean.platform.disorder.model.entity.vo.TbCompanyVo">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM tb_company
+		<where>
+			is_delete = 0
+			<if test="id != null">
+				AND id = #{id, jdbcType=BIGINT}
+			</if>
+			<if test="companyCode != null">
+				AND company_code = #{companyCode, jdbcType=VARCHAR}
+			</if>
+			<if test="companyName != null and companyName != ''">
+				AND company_name like #{companyName, jdbcType=VARCHAR}"%"
+			</if>
+			<if test="cuscc != null">
+				AND cuscc = #{cuscc, jdbcType=VARCHAR}
+			</if>
+			<if test="status != null">
+				AND status = #{status, jdbcType=SMALLINT}
+			</if>
+			<if test="contact != null and contact != ''">
+				AND contact = #{contact, jdbcType=VARCHAR}
+			</if>
+			<if test="contactTel != null">
+				AND contact_tel like #{contactTel, jdbcType=VARCHAR}"%"
+			</if>
+			<if test="address != null">
+				AND address = #{address, jdbcType=VARCHAR}
+			</if>
+			<if test="level != null">
+				AND level = #{level, jdbcType=SMALLINT}
+			</if>
+			<if test="isDelete != null">
+				AND is_delete = #{isDelete, jdbcType=SMALLINT}
+			</if>
+			<if test="startCreateTime != null and startCreateTime != ''">
+				AND create_time  <![CDATA[>=]]> #{startCreateTime, jdbcType=VARCHAR}
+			</if>
+			<if test="endCreateTime != null and endCreateTime != ''">
+				AND create_time <![CDATA[<]]> #{endCreateTime, jdbcType=VARCHAR}
+			</if>
+			<if test="createUser != null">
+				AND create_user = #{createUser, jdbcType=VARCHAR}
+			</if>
+			<if test="updateTime != null">
+				AND update_time = #{updateTime, jdbcType=TIMESTAMP}
+			</if>
+			<if test="updateUser != null">
+				AND update_user = #{updateUser, jdbcType=BIGINT}
+			</if>
+		</where>
+	</select>
+
+	<select id="selectByName" resultType="clean.platform.disorder.model.entity.vo.TbCompanyVo">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM tb_company
+		<where>
+			company_name = #{companyName, jdbcType=VARCHAR}
+		</where>
+
+	</select>
+
+	<select id="selectCompanyItem" resultType="clean.platform.disorder.model.entity.vo.TbCompanyItemVo">
+		select
+		b.id as itemId,
+		b.item_name as itemName
+		from tb_company_item a left join tb_service_item b
+		on a.item_id = b.id
+		where a.company_id = #{companyId,jdbcType=BIGINT}
+	</select>
+
+	<select id="selectCompanyItemConfig" resultType="clean.platform.disorder.model.entity.vo.TbServiceItemConfigVo">
+		select
+		b.*
+		from tb_company_item a left join tb_service_item_config b
+		on a.config_id = b.id
+		where a.company_id = #{companyId,jdbcType=BIGINT}
+		and a.item_id = #{itemId,jdbcType=BIGINT}
+	</select>
+
+</mapper>

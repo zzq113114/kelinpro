@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="dis-order:war">
+    <output-path>$PROJECT_DIR$/order/trunk/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>dis-order</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="kelin.war">
+      <element id="artifact" artifact-name="dis-order:war exploded" />
+    </root>
+  </artifact>
+</component>

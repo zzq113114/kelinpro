@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="clean.platform.disorder.mapper.extend.TbFinishedOrderExtendMapper">
+
+	<sql id="Base_Column_List">
+		id, order_id, status, income_amount, reason, evaluations, eval_level, create_date, create_user
+	</sql>
+
+	<!-- 根据id查询 -->
+	<select id="selectByPK" resultType="clean.platform.disorder.model.entity.vo.TbFinishedOrderVo">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM tb_finished_order
+		WHERE id = #{id, jdbcType=BIGINT}
+	</select>
+
+	<!-- 根据vo查询 -->
+	<select id="selectByVo" resultType="clean.platform.disorder.model.entity.vo.TbFinishedOrderVo"
+		parameterType="clean.platform.disorder.model.entity.vo.TbFinishedOrderVo">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM tb_finished_order
+		<where>
+			<if test="id != null">
+				AND id = #{id, jdbcType=BIGINT}
+			</if>
+			<if test="orderId != null">
+				AND order_id = #{orderId, jdbcType=BIGINT}
+			</if>
+			<if test="status != null">
+				AND status = #{status, jdbcType=SMALLINT}
+			</if>
+			<if test="incomeAmount != null">
+				AND income_amount = #{incomeAmount, jdbcType=DECIMAL},
+			</if>
+			<if test="reason != null">
+				AND reason = #{reason, jdbcType=VARCHAR}
+			</if>
+			<if test="evaluations != null">
+				AND evaluations = #{evaluations, jdbcType=VARCHAR}
+			</if>
+			<if test="evalLevel != null">
+				AND eval_level = #{evalLevel, jdbcType=SMALLINT}
+			</if>
+			<if test="createDate != null">
+				AND create_date = #{createDate, jdbcType=TIMESTAMP}
+			</if>
+			<if test="createUser != null">
+				AND create_user = #{createUser, jdbcType=VARCHAR}
+			</if>
+		</where>
+	</select>
+
+
+
+
+</mapper>
